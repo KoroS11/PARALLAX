@@ -1,0 +1,26 @@
+{
+  "run_id": "judge-run-20261018-164653-26ca5b",
+  "generated_at": "2026-10-19T05:53:20.118222+00:00",
+  "files": [
+    {
+      "filename": "judge_hlyn-labs-3b_latest.jsonl",
+      "rel_path": "judge-run-20261018-164653-26ca5b\\judge_hlyn-labs-3b_latest.jsonl",
+      "size_bytes": 65605,
+      "sha256": "41e2c7fe41c8cb63864e7e9d0ffd9715ad3acb84855ba6f3cfead860965536ec",
+      "num_records": 50,
+      "split_counts": {
+        "dev": 25,
+        "val": 25
+      }
+    }
+  ],
+  "total_records": 50,
+  "split_counts": {
+    "dev": 25,
+    "val": 25
+  },
+  "model_digests": {
+    "hlyn-labs-3b:latest": "d90b3206ce655d9415afd336bfde27cd344ba539ed12e6b393578091cb539e64"
+  },
+  "template_hashes": {}
+}

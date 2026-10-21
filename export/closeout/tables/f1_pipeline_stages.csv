@@ -1,0 +1,9 @@
+Stage Name,Component / Model,Operational Threshold / Policy,Active Arms
+D2 DeBERTa-v3,protectai/deberta-v3-base-prompt-injection-v2,Platt Calibrated,"Arm A, B, R, U"
+D3 Deepset,deepset/deberta-v3-base-injection,Logit-Diff Platt Calibrated,"Arm A, B, R, U"
+D4 Regex Rules,RuleDetector regex heuristics,Deterministic Binary,"Arm A, B, R, U"
+AnyFlag Fusion,Ensemble Composition,any detector flags attack,Arm A
+Learned Router,Supervised Logistic Error Predictor,tau = 0.35,Arm R (Primary)
+Discrepancy Trigger,Heuristic Uncertainty Gating,Delta >= 0.35 or Conf < 0.60,Arm B
+LLM Judge,gemma3:4b (Ollama local),"temp=0.0, max_tokens=128","Arm U, C2, R, B"
+Policy B,Asymmetric Authority Mapper,BLOCK -> FLAG only on certified allow,"Arm B, R, U"

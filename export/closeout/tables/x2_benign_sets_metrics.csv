@@ -1,0 +1,11 @@
+Dataset,Arm,ALLOW,FLAG,BLOCK,Total N
+NotInject,Arm R (primary),137,110,62,309
+NotInject,Arm A (post-hoc),139,0,170,309
+NotInject,Arm B (post-hoc),137,143,29,309
+NotInject,Arm U (post-hoc),137,143,29,309
+NotInject,Arm C2 (post-hoc),299,0,10,309
+Dolly,Arm R (primary),192,7,1,200
+Dolly,Arm A (post-hoc),192,0,8,200
+Dolly,Arm B (post-hoc),192,8,0,200
+Dolly,Arm U (post-hoc),192,8,0,200
+Dolly,Arm C2 (post-hoc),200,0,0,200

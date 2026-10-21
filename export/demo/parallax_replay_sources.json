@@ -1,0 +1,18 @@
+{
+  "output_file": "export\\demo\\parallax_replay.gif",
+  "sha256": "f2e12865b18cc520b3ab52f9936a115b9e95a5ade87ab8f0c5f4fd7112633cdc",
+  "frames_json": "export\\demo\\parallax_replay_frames.json",
+  "frames_json_sha256": "480cc890acf1cb82a57549eccc47bad112a960c60ce917d2f5691698db43934d",
+  "git_commit": "932282aa473861e647b455731cc4f162826d3e4d",
+  "frame_count": 61,
+  "dimensions": "920x520",
+  "file_size_bytes": 1716693,
+  "fps": 8,
+  "sources": [
+    "results/final-v4/predictions.jsonl",
+    "export/closeout/external_predictions.jsonl",
+    "numbers.json",
+    "export/closeout/external_metrics.json"
+  ],
+  "sampling_policy": "Deterministic seed 0: all 10 judge-abstain attack rows, all 22 Arm R FNs, all 13 Arm R FBs, 6 ordinary held-out rows, and 12 external rows (4 Gandalf, 4 NotInject, 4 Dolly). Frame 61 displays full official closeout benchmark tallies."
+}

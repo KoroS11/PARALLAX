@@ -1,0 +1,18 @@
+{
+  "title": "Pipeline Architecture",
+  "split": "Design / Architecture",
+  "n": 347,
+  "source_files": [
+    "configs/pf_two_detectors.yaml",
+    "parallax/router/learned_router.py",
+    "parallax/challenger/trigger.py"
+  ],
+  "source_sha256": [
+    "43779b693265c89d6afb171e0b9a41b7a3fed6e9a7d67bd297becedcbd050722"
+  ],
+  "assertions": [
+    "Router tau == 0.35",
+    "Judge == gemma3:4b",
+    "Policy == Policy B"
+  ]
+}

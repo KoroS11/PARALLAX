@@ -1,0 +1,332 @@
+{
+  "F1": {
+    "title": "Pipeline Architecture",
+    "split": "Design / Architecture",
+    "n": 347,
+    "source_files": [
+      "configs/pf_two_detectors.yaml",
+      "parallax/router/learned_router.py",
+      "parallax/challenger/trigger.py"
+    ],
+    "source_sha256": [
+      "43779b693265c89d6afb171e0b9a41b7a3fed6e9a7d67bd297becedcbd050722"
+    ],
+    "assertions": [
+      "Router tau == 0.35",
+      "Judge == gemma3:4b",
+      "Policy == Policy B"
+    ]
+  },
+  "F2": {
+    "title": "Data Composition Across Splits and External Sets",
+    "split": "dev / val / held_out_v4 / external",
+    "n": 1542,
+    "source_files": [
+      "numbers.json",
+      "data/splits/dev.jsonl",
+      "data/splits/val.jsonl",
+      "results/final-v4/predictions.jsonl"
+    ],
+    "source_sha256": [
+      "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57",
+      "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+    ],
+    "assertions": [
+      "dev=297",
+      "val=277",
+      "held_out_v4=347"
+    ]
+  },
+  "F3": {
+    "title": "Detector Discrimination (ROC-AUC) Across Splits",
+    "split": "dev / val / held_out_v4",
+    "n": 347,
+    "source_files": [
+      "scripts/eval/detector_auc_table.py",
+      "results/final-v4/predictions.jsonl"
+    ],
+    "source_sha256": [
+      "a60bdf88cc6986432c3a12af3deba9b01e768ddffcd3288cf3b655181ef83766",
+      "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+    ],
+    "assertions": [
+      "D3 val AUC == 0.8452",
+      "D3 held_out AUC == 0.7761"
+    ]
+  },
+  "F4": {
+    "title": "Defense Arm Performance Comparison on held_out_v4",
+    "split": "held_out_v4",
+    "n": 347,
+    "source_files": [
+      "numbers.json",
+      "results/final-v4/predictions.jsonl"
+    ],
+    "source_sha256": [
+      "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57",
+      "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+    ],
+    "assertions": [
+      "Arm R loose recall == 84.17%",
+      "Arm B loose recall == 89.93%"
+    ]
+  },
+  "F5": {
+    "title": "Pareto Operating Frontier Across Defense Arms",
+    "split": "held_out_v4",
+    "n": 347,
+    "source_files": [
+      "scripts/eval/compute_pareto.py",
+      "numbers.json"
+    ],
+    "source_sha256": [
+      "5e82a0eb33f2dd638272c86faa81438898579e14baa979727db8dc28482780ec",
+      "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57"
+    ],
+    "assertions": [
+      "All arms non-dominated == True",
+      "Arm R calls == 72.33"
+    ]
+  },
+  "F6": {
+    "title": "Decision Composition by Arm on held_out_v4",
+    "split": "held_out_v4",
+    "n": 347,
+    "source_files": [
+      "results/final-v4/predictions.jsonl"
+    ],
+    "source_sha256": [
+      "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+    ],
+    "assertions": [
+      "Arm R atk == 22 allow, 36 flag, 81 block",
+      "Arm R ben == 143 allow, 52 flag, 13 block"
+    ]
+  },
+  "F7": {
+    "title": "Router Diagnostic Analysis and Random Routing Benchmark",
+    "split": "held_out_v4",
+    "n": 347,
+    "source_files": [
+      "results/final-v4/predictions.jsonl",
+      "numbers.json"
+    ],
+    "source_sha256": [
+      "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444",
+      "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57"
+    ],
+    "assertions": [
+      "Router AUC vs Error == 0.5296",
+      "Random routing mean recall == 87.48%"
+    ]
+  },
+  "F8": {
+    "title": "Judge Outcome Counts and Latency Distribution",
+    "split": "held_out_v4",
+    "n": 347,
+    "source_files": [
+      "results/final-v4/predictions.jsonl"
+    ],
+    "source_sha256": [
+      "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+    ],
+    "assertions": [
+      "Abstain count == 10",
+      "Abstain mean latency == 7794.3"
+    ]
+  },
+  "F9": {
+    "title": "Decisions Trace Across Arms for 10 Judge Abstain Rows",
+    "split": "held_out_v4",
+    "n": 10,
+    "source_files": [
+      "results/final-v4/predictions.jsonl"
+    ],
+    "source_sha256": [
+      "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+    ],
+    "assertions": [
+      "Abstain rows count == 10",
+      "BLOCK to FLAG downgrades == 7"
+    ]
+  },
+  "F10": {
+    "title": "Operational Cost vs Detection Recall Across Arms",
+    "split": "held_out_v4",
+    "n": 347,
+    "source_files": [
+      "numbers.json"
+    ],
+    "source_sha256": [
+      "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57"
+    ],
+    "assertions": [
+      "Arm R calls == 72.33",
+      "Arm U calls == 100.0",
+      "y_min == 0"
+    ]
+  },
+  "F11": {
+    "title": "Error Breakdown by Family for Primary Arm R",
+    "split": "held_out_v4",
+    "n": 347,
+    "source_files": [
+      "results/final-v4/predictions.jsonl"
+    ],
+    "source_sha256": [
+      "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+    ],
+    "assertions": [
+      "Total false negatives == 22",
+      "Total false blocks == 13"
+    ]
+  },
+  "F12": {
+    "title": "Confusion Matrices for Arm R and Arm A on held_out_v4",
+    "split": "held_out_v4",
+    "n": 347,
+    "source_files": [
+      "results/final-v4/predictions.jsonl"
+    ],
+    "source_sha256": [
+      "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+    ],
+    "assertions": [
+      "Arm R atk allow==22, flag==36, block==81",
+      "Arm A atk allow==37, flag==0, block==102"
+    ]
+  },
+  "F13": {
+    "title": "Detector by Dataset Contamination Matrix",
+    "split": "Design / External Candidates",
+    "n": 6,
+    "source_files": [
+      "docs/EXTERNAL_DATASET_REVIEW.md"
+    ],
+    "source_sha256": [
+      "a20855e7ae3f6f93cdc68ddf92a89ef213c0ce6371ebff12b605952291a77b9d"
+    ],
+    "assertions": [
+      "D2 XSTest overlap == True",
+      "D3 deepset overlap == True"
+    ]
+  },
+  "F14": {
+    "title": "Provenance Timeline and Cryptographic Hash Chain",
+    "split": "All Splits / Governance",
+    "n": 7,
+    "source_files": [
+      "docs/PROVENANCE.md",
+      "data/splits/FROZEN.sha256",
+      "data/external/FROZEN_EXTERNAL.sha256"
+    ],
+    "source_sha256": [
+      "1cfa8160e4cd29f2770f72d07cf85c74cfc4043a2bb07b35e5ffa7554bd220b1"
+    ],
+    "assertions": [
+      "Protocol-lock strictly precedes run start",
+      "Manifest timestamp strictly precedes producing commit"
+    ]
+  },
+  "F15": {
+    "title": "Closeout Audit Trail of Methodological Defects + Fix-Forward Items",
+    "split": "Methodology Audit",
+    "n": 9,
+    "source_files": [
+      "docs/METHODOLOGY_FAILURES.md",
+      "docs/CLOSEOUT_TESTLOG.md"
+    ],
+    "source_sha256": [
+      "8d6964829f4cb579efde017ccf40ab43e05589572b3fe57d1a87c4f514d89466",
+      "020b09166001e98fe594e0326b1193dfcde0790921a766b6d9d20a837cfc54ad"
+    ],
+    "assertions": [
+      "All 6 original defects documented in git history",
+      "3 fix-forward items added",
+      "0 banned words in remediation text"
+    ]
+  },
+  "X1": {
+    "title": "Gandalf External Benchmark Recall (ceiling-effect note included)",
+    "split": "external: Gandalf",
+    "n": 112,
+    "source_files": [
+      "export/closeout/external_predictions.jsonl"
+    ],
+    "source_sha256": [
+      "28a06dd87952fe2551fa65a05e3188fa9afb3919afeebde96a5edbe0e1d2c461"
+    ],
+    "assertions": [
+      "Arm R loose recall == 100.00%",
+      "Arm A recall == 100.00%",
+      "y_max == 105",
+      "scored once"
+    ]
+  },
+  "X2": {
+    "title": "Decision Composition on External Benign Sets",
+    "split": "external: NotInject (n=309) & Dolly (n=200)",
+    "n": 509,
+    "source_files": [
+      "export/closeout/external_predictions.jsonl"
+    ],
+    "source_sha256": [
+      "28a06dd87952fe2551fa65a05e3188fa9afb3919afeebde96a5edbe0e1d2c461"
+    ],
+    "assertions": [
+      "NotInject n == 309",
+      "Dolly n == 200",
+      "Never pooled == True"
+    ]
+  },
+  "X3": {
+    "title": "NotInject Subsets and Multilingual Analysis",
+    "split": "external: NotInject",
+    "n": 309,
+    "source_files": [
+      "export/closeout/external_predictions.jsonl",
+      "data/external/notinject.jsonl"
+    ],
+    "source_sha256": [
+      "28a06dd87952fe2551fa65a05e3188fa9afb3919afeebde96a5edbe0e1d2c461",
+      "a7c2e8460c3885ddf22df4306031b9f1e9829e8f12dfc6f1688fdbab93542366"
+    ],
+    "assertions": [
+      "English n == 225",
+      "Multilingual n == 84",
+      "Left panel reads from notinject_addendum_metrics.json"
+    ]
+  },
+  "X4": {
+    "title": "Arm R Comparison Across Design Split and External Benchmark Sets",
+    "split": "held_out_v4 vs external",
+    "n": 968,
+    "source_files": [
+      "results/final-v4/predictions.jsonl",
+      "export/closeout/external_predictions.jsonl"
+    ],
+    "source_sha256": [
+      "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444",
+      "28a06dd87952fe2551fa65a05e3188fa9afb3919afeebde96a5edbe0e1d2c461"
+    ],
+    "assertions": [
+      "No connecting lines drawn == True",
+      "No single pooled metric calculated == True"
+    ]
+  },
+  "X5": {
+    "title": "Judge Verdicts and Latency on External Evaluation Benchmark",
+    "split": "external: All Sets",
+    "n": 621,
+    "source_files": [
+      "export/closeout/external_predictions.jsonl"
+    ],
+    "source_sha256": [
+      "28a06dd87952fe2551fa65a05e3188fa9afb3919afeebde96a5edbe0e1d2c461"
+    ],
+    "assertions": [
+      "Total external rows == 621",
+      "Abstain count == 1"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "run_id": "wave_c_benchmark",
+  "experiment_id": "E1-E7",
+  "timestamp_utc": "2026-10-11T14:37:44.512497+00:00",
+  "random_seed": 42,
+  "git": {
+    "git_sha": "fb6e1de1b4145d9bc12d583dd6f187582413073f",
+    "git_branch": "main",
+    "git_dirty": true
+  },
+  "dataset_hashes": {},
+  "hardware": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "os_system": "Windows",
+    "cpu_architecture": "AMD64",
+    "cpu_count_logical": 16,
+    "total_ram_gb": 15.68,
+    "gpu": {
+      "cuda_available": true,
+      "device_count": 1,
+      "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "total_vram_gb": 4.0
+    }
+  },
+  "environment": {
+    "python_executable": "C:\\Users\\harsh\\Downloads\\PARALLAX\\.venv\\Scripts\\python.exe",
+    "libraries": {
+      "python": "3.11.15",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pandas": "3.0.6",
+      "torch": "2.14.1+cu126",
+      "transformers": "5.18.0",
+      "sentence-transformers": "6.1.0",
+      "pydantic": "2.13.5",
+      "fastapi": "0.142.2",
+      "pytest": "9.1.1",
+      "matplotlib": "3.11.2",
+      "seaborn": "0.13.2"
+    }
+  },
+  "metadata": {}
+}

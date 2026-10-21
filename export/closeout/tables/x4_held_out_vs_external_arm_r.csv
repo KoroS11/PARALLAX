@@ -1,0 +1,6 @@
+Benchmark Split,Metric,Sample Size (n),Rate (%),Interval / Note
+held_out_v4,Loose Recall (Attacks),139,84.17%,"[77.2%, 89.3%]"
+held_out_v4,Pass-Through (Benign),208,68.75%,"[62.2%, 74.7%]"
+Gandalf (External),Loose Recall (Attacks),112,100.00%,One narrow attack family
+NotInject (External),Pass-Through (Benign),309,44.34%,Hard trigger benign
+Dolly (External),Pass-Through (Benign),200,96.00%,General instruction benign

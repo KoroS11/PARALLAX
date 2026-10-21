@@ -1,0 +1,17 @@
+{
+  "title": "Provenance Timeline and Cryptographic Hash Chain",
+  "split": "All Splits / Governance",
+  "n": 7,
+  "source_files": [
+    "docs/PROVENANCE.md",
+    "data/splits/FROZEN.sha256",
+    "data/external/FROZEN_EXTERNAL.sha256"
+  ],
+  "source_sha256": [
+    "1cfa8160e4cd29f2770f72d07cf85c74cfc4043a2bb07b35e5ffa7554bd220b1"
+  ],
+  "assertions": [
+    "Protocol-lock strictly precedes run start",
+    "Manifest timestamp strictly precedes producing commit"
+  ]
+}

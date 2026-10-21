@@ -1,0 +1,21 @@
+# PARALLAX Arm C3: hlyn-labs Prompt Injection Judge 8B (Q8_0)
+# Tuned num_gpu offload for 4GB VRAM host (RTX 3050 Laptop GPU):
+# Total layers: 33 (Llama-3.1-8B architecture).
+# Offload allocation: 14 layers to GPU (~3.1 GB VRAM), 19 layers to CPU host RAM (~5.4 GB).
+# System RAM peak: 15.68 GB (forces pagefile swapping when host free RAM < 5.5 GB).
+
+FROM defender-8b-Q8_0.gguf
+
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ if .Prompt }}<|im_start|>user
+{{ .Prompt }}<|im_end|>
+{{ end }}<|im_start|>assistant
+"""
+
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
+PARAMETER temperature 0.0
+PARAMETER num_ctx 1024
+PARAMETER num_predict 128
+PARAMETER num_gpu 14

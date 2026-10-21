@@ -1,0 +1,7 @@
+Dataset / Split,Total Prompts,Attacks,Benign,Role / Source Description
+dev,297,114,183,In-sample development
+val,277,109,168,Validation & threshold tuning
+held_out_v4,347,139,208,One-shot design evaluation
+external: Gandalf,112,112,0,Lakera/gandalf_ignore_instructions (test)
+external: NotInject,309,0,309,leolee99/NotInject (filtered n=309)
+external: Dolly,200,0,200,databricks/databricks-dolly-15k (stratified n=200)

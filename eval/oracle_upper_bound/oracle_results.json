@@ -1,0 +1,35 @@
+{
+  "total_samples": 146,
+  "arm_b_rule_oracle": {
+    "name": "Arm B Oracle Upper Bound (Rule Trigger + Perfect Challenger)",
+    "recall": 0.0,
+    "fpr": 0.0,
+    "precision": 0.0,
+    "f1": 0.0,
+    "routed_count": 0,
+    "extra_calls_per_100": 0.0
+  },
+  "arm_r_learned_oracle": {
+    "name": "Arm R Oracle Upper Bound (Learned Router + Perfect Challenger)",
+    "recall": 0.0778,
+    "fpr": 0.0,
+    "precision": 1.0,
+    "f1": 0.1443,
+    "routed_count": 10,
+    "extra_calls_per_100": 6.85
+  },
+  "arm_u_universal_oracle": {
+    "name": "Arm U Oracle Upper Bound (Universal Perfect Challenger)",
+    "recall": 1.0,
+    "fpr": 0.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "routed_count": 146,
+    "extra_calls_per_100": 100.0
+  },
+  "metadata": {
+    "run_id": "oracle-eval-f728f1a0",
+    "timestamp": "2026-10-18T12:25:59.651799+00:00",
+    "disclaimer": "THEORETICAL UPPER BOUND ONLY. Excluded from headline tables and reports."
+  }
+}

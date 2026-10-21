@@ -1,0 +1,26 @@
+{
+  "figure_id": "arch_pipeline",
+  "script": "scripts/eval/make_ieee_figures.py",
+  "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+  "source_files": [
+    "parallax/router/learned_router.py",
+    "parallax/challenger/judge.py",
+    "parallax/data/schema.py",
+    "parallax/challenger/challenger_v2.py"
+  ],
+  "source_sha256": {
+    "parallax/router/learned_router.py": "c7122a394282ec6508b7e0d6530b968839f6117862da1e6e7fbc31164b713062",
+    "parallax/challenger/judge.py": "ba0f186e1df76eb5642199cf8de883b5ca5e5d7b912ebc760ed55d51aacb58eb",
+    "parallax/data/schema.py": "4cfcb6ef29599e893074a3c4456d12644fd05c903051cb4c8d751d0888058359",
+    "parallax/challenger/challenger_v2.py": "b7d55c8bec9601c3d4d53b182fa1c0b3778e6f605a2aa15f263bfaf82b807b99"
+  },
+  "assertions": [
+    "tau == 0.35  # learned_router.py:73",
+    "judge num_predict == 128  # judge.py:293",
+    "judge temperature == 0.0  # judge.py:32",
+    "NFKC normalization: schema.py:75; base64/hex are D4 patterns not a pipeline stage",
+    "Policy B: challenger_v2.py:343-456"
+  ],
+  "pdf_sha256": "fffc78fedb884d1f34fe651894ae6c544782639bc2f992b223ead33eadaaf218",
+  "png_sha256": "416f9cc599547877fb8805c84f3d03a76efcce636691f6a8205f58cd448cffd4"
+}

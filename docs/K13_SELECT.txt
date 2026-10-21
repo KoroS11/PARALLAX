@@ -1,0 +1,95 @@
+PARALLAX — K13 DATASET SELECTION AND AUTHORIZATION
+
+Selected by: Harsh Jain
+Date: 2026-10-20
+Protocol commit reviewed: 35ee1022244f65e4eb6ea5f9e883914ccc6b12fc
+
+ATTACK DATASET
+Dataset: Lakera/gandalf_ignore_instructions
+Split: test
+Expected rows before deduplication: 112
+Scope: player-submitted, similarity-filtered; one narrow attack family.
+  Represents prompts submitted to the Gandalf web game filtered by cosine
+  similarity (>= 0.825) against "Ignore all previous instructions".
+  This benchmark represents one narrow attack family and must not be
+  presented as representative of all prompt injections.
+Source/revision: https://huggingface.co/datasets/Lakera/gandalf_ignore_instructions
+  Pinned revision: 04737b65e90a6794ec227012e4a255a7def6344b
+  License: MIT License
+
+BENIGN FAMILY 1
+Dataset: leolee99/NotInject
+Subsets: all three documented subsets (NotInject_one, NotInject_two,
+  NotInject_three), expected total n=339 before deduplication and filtering.
+  Card documents subsets by trigger-word count (1, 2, or 3 trigger words);
+  no split named "test" exists.
+Multilingual rows: retained and reported separately. Non-English rows
+  are identified by category == 'Multilingual Queries' per card taxonomy.
+Extraction and filtering: extract 'prompt' column. No filtering based on
+  detector scores, router uncertainty, or model predictions.
+Source/revision: https://huggingface.co/datasets/leolee99/NotInject
+  Pinned revision: 847ae76cf8fea5ed325429e569ae8cfef022d2e0
+  License: MIT License
+
+BENIGN FAMILY 2
+Dataset: databricks/databricks-dolly-15k
+Prompt fields: instruction + context (if context is empty, instruction alone;
+  otherwise instruction + "\n\n" + context).
+Character cap: 2,000 characters evaluated on combined prompt, applied
+  before sampling. Truncation is not used; prompts exceeding 2,000 characters
+  are excluded prior to sampling.
+Sample: stratified n=200 across documented categories, random seed 0.
+  Cap and sampling are deterministic and completely independent of detector
+  scores or evaluation outcomes.
+Redistribution: row IDs and hashes only; no raw prompt text committed
+  to the repository.
+License/attribution: Creative Commons Attribution-ShareAlike 3.0 Unported
+  (CC BY-SA 3.0). Attribution: Databricks, Inc.
+Source/revision: https://huggingface.co/datasets/databricks/databricks-dolly-15k
+  Pinned revision: bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a
+
+EXCLUSIONS AND DEFERRED DATASETS
+deepset/prompt-injections: excluded; documented overlap with D3 training data.
+  D3's model card cites training on JasperLS/prompt-injections and lists
+  deepset/prompt-injections in metadata (exact repository identity between
+  JasperLS and deepset not established from card texts).
+XSTest: dropped; documented overlap in d2's model card.
+  d2's model card cites natolambert/xstest-v2-copy in training data.
+TruthfulQA: dropped; no distinct evidence for this evaluation (broad factual
+  QA rather than adversarial injection or false-refusal boundary test).
+  Not excluded for contamination.
+HackAPrompt: deferred; gated access requiring human click-through and
+  unspecified split sizes; not included in this evaluation.
+
+EVALUATION RULES
+Primary arm: Arm R (Learned Review Router with Policy B, tau = 0.35),
+  as pre-registered in protocol.
+Other arms: descriptive comparisons only (Arm A, Arm B, Arm U, Arm C2,
+  Prompt Guard 2, PromptForest); explicitly labelled "Post-Hoc Descriptive Arms".
+Benign families: reported separately (NotInject and Dolly are never pooled).
+Uncertainty: report all metrics with 95% confidence intervals (Wilson score
+  or bootstrap).
+Interpretation: no binary pass/fail claims; no claim that detectors generally
+  "generalize" based solely on this external benchmark.
+Length audit: text-only length audit (attack vs benign length distributions and
+  length-only AUC) required in Phase B2 before scoring, acknowledging that
+  attack and benign prompts originate from different source distributions.
+Ceiling effect disclosure: Gandalf prompts are direct "ignore instructions"
+  variants; pattern-based detectors (D4 regex) are expected to match many of
+  them. Per-detector recall must be reported alongside Arm R.
+Held-out preservation: frozen held_out_v4 evaluation, data, splits, predictions,
+  metrics, thresholds, and behavior-bearing code remain completely unchanged.
+
+AUTHORIZATION
+Permitted scope: B1 and B2 only, when separately instructed by the human.
+B1: runner implementation (scripts/eval/eval_external.py), review, and
+  hash freeze; append-only logging with crash-resume support; no scoring.
+B2: dataset download, deterministic preprocessing, deduplication, hash freeze,
+  post-processing row count verification, candidate evaluation runtime estimate,
+  and text-only length audit.
+Required stop: after B2, STOP and present the complete review package to the
+  human before any scoring.
+Scoring authorization: NOT GRANTED
+Tuning authorization: NOT GRANTED
+held_out_v4 modification authorization: NOT GRANTED
+Further phase authorization: requires separate explicit human approval

@@ -1,0 +1,17 @@
+{
+  "title": "Arm R Comparison Across Design Split and External Benchmark Sets",
+  "split": "held_out_v4 vs external",
+  "n": 968,
+  "source_files": [
+    "results/final-v4/predictions.jsonl",
+    "export/closeout/external_predictions.jsonl"
+  ],
+  "source_sha256": [
+    "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444",
+    "28a06dd87952fe2551fa65a05e3188fa9afb3919afeebde96a5edbe0e1d2c461"
+  ],
+  "assertions": [
+    "No connecting lines drawn == True",
+    "No single pooled metric calculated == True"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Judge Verdicts and Latency on External Evaluation Benchmark",
+  "split": "external: All Sets",
+  "n": 621,
+  "source_files": [
+    "export/closeout/external_predictions.jsonl"
+  ],
+  "source_sha256": [
+    "28a06dd87952fe2551fa65a05e3188fa9afb3919afeebde96a5edbe0e1d2c461"
+  ],
+  "assertions": [
+    "Total external rows == 621",
+    "Abstain count == 1"
+  ]
+}

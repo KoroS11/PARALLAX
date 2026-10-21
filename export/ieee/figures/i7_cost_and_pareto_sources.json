@@ -1,0 +1,17 @@
+{
+  "figure_id": "i7_cost_and_pareto",
+  "script": "scripts/eval/make_ieee_figures.py",
+  "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+  "source_files": [
+    "numbers.json"
+  ],
+  "source_sha256": {
+    "numbers.json": "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57"
+  },
+  "assertions": [
+    "Arm R calls == 72.33",
+    "All arms non-dominated == True"
+  ],
+  "pdf_sha256": "c0b7d0e87b6ab9087ce0931e27c37c249eddd84df87a4bc81fb0a958905a6aea",
+  "png_sha256": "8213b8145e41126986d5669afe37da4ca3a8666aef3621e47d282b103120eac2"
+}

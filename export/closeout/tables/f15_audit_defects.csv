@@ -1,0 +1,10 @@
+Defect Category,Detection Source File,Identified Anomaly,Formal Closeout Remediation
+Hand-typed literal,scripts/export_viz_data.py:194,22 / 44 / 73 literal in dashboard,Replaced with recount_metrics.py derived from predictions.jsonl (22/36/81)
+Copied CI duplicate,docs/REVIEW_PACKAGE.md,Duplicated CI token copied across tables,"Re-derived exact bootstrap quantiles [84.17%, 90.65%] by script"
+Unsupported interval,docs/PRIMARY_ARM_CHECK.md,Binomial 82.01-92.81% interval in text,Removed binomial interval; retained empirical 2.5/97.5 quantiles
+Abstain scope wording,docs/JUDGE_OUTCOMES_AUDIT.md,Claimed unified abstain across all rows,"Corrected to 10/139 attack abstains, 0/208 benign (Fisher p=8.71e-5)"
+Router skill wording,docs/SAFE_CLAIMS.md,Described router as 'worse than random',Replaced with 'near chance / no demonstrated skill' (AUC 0.53)
+NotInject overlap stop,docs/EXTERNAL_EVAL_PROTOCOL.md,8.85% dev overlap triggered stop rule,Phase B2 stopped; 30 exact-match rows excluded to freeze at N=309
+FIX-FWD: Multilingual category mismatch,scripts/eval/external_metrics.py,Script checked category=='Multilingual Queries'; dataset stores 'Multilingual'; split returned n=0,"Post-hoc addendum script joins by prompt_id; correct split English=225, Multilingual=84"
+FIX-FWD: Dolly text committed,"git log df23e6b, 9e68954",Dolly prompt text committed in external_input_interleaved.jsonl and external_predictions.jsonl,"Both files untracked, gitignored; text-free external_predictions_notext.jsonl committed"
+FIX-FWD: Gate-claim correction,docs/OVERNIGHT_REPORT.md,Report claimed 100% gate pass; preflight row 0 differed (Ollama HTTP 500 -> abs path fallback),"Corrected: gate passed, row 0 discrepancy documented in LIMITATIONS"

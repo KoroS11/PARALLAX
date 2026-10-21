@@ -1,0 +1,176 @@
+{
+  "i1_held_out_arms": {
+    "figure_id": "i1_held_out_arms",
+    "script": "scripts/eval/make_ieee_figures.py",
+    "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+    "source_files": [
+      "numbers.json",
+      "results/final-v4/predictions.jsonl"
+    ],
+    "source_sha256": {
+      "numbers.json": "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57",
+      "results/final-v4/predictions.jsonl": "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+    },
+    "assertions": [
+      "Arm R loose recall == 84.17%",
+      "Arm R pass-through == 68.75%"
+    ],
+    "pdf_sha256": "1a0d575dca9f7218bf732d5c3acbe362fdd4a62753f157f1f27a83987d58aa05",
+    "png_sha256": "5eebea5e1459e2cdce8fd5497d3c5803d1acb8fe69e8776f026fc0b2a7733aac"
+  },
+  "i2_detector_auc": {
+    "figure_id": "i2_detector_auc",
+    "script": "scripts/eval/make_ieee_figures.py",
+    "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+    "source_files": [
+      "numbers.json",
+      "scripts/eval/detector_auc_table.py"
+    ],
+    "source_sha256": {
+      "numbers.json": "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57",
+      "scripts/eval/detector_auc_table.py": "a60bdf88cc6986432c3a12af3deba9b01e768ddffcd3288cf3b655181ef83766"
+    },
+    "assertions": [
+      "D2 held-out AUC == 0.7812",
+      "D3 held-out AUC == 0.7763",
+      "y-axis starts at 0.0",
+      "PF dev/val marked n/a"
+    ],
+    "pdf_sha256": "302a845d6d60b974f7a796eb1a17dcc28c73f38c3adf583ba231c2c298b992e5",
+    "png_sha256": "f2e283bc8f00952089d572896778edbc92ef7802136ff93f9172cd194c4be04b"
+  },
+  "i3_router_analysis": {
+    "figure_id": "i3_router_analysis",
+    "script": "scripts/eval/make_ieee_figures.py",
+    "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+    "source_files": [
+      "numbers.json",
+      "results/final-v4/predictions.jsonl"
+    ],
+    "source_sha256": {
+      "numbers.json": "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57",
+      "results/final-v4/predictions.jsonl": "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+    },
+    "assertions": [
+      "Router AUC == 0.5296",
+      "Arm R percentile recall == 4.5%",
+      "Simulation: random routing k=251, 2000 draws, seed 0"
+    ],
+    "pdf_sha256": "416764cf2d6fd5ea36ffef5c451c9d7b25d08a2d8fbfb1c2b166cded65c8d138",
+    "png_sha256": "452da7c80e708356aae91dbd3617451f9646d6f21f8dbcfbee0fb9cb6495c5ea"
+  },
+  "i4_judge_outcomes": {
+    "figure_id": "i4_judge_outcomes",
+    "script": "scripts/eval/make_ieee_figures.py",
+    "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+    "source_files": [
+      "results/final-v4/predictions.jsonl"
+    ],
+    "source_sha256": {
+      "results/final-v4/predictions.jsonl": "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+    },
+    "assertions": [
+      "Abstain count == 10",
+      "Median latency delta == 39.5%"
+    ],
+    "pdf_sha256": "c8310dc702fc7d18ec06d4254c3a4630903a18fd1e09e4bbc8eb69da5dbf97ff",
+    "png_sha256": "2daa5e4592ea338be3ee65ae1f9c2454e76f8a0f00740a402ee78d94733dc980"
+  },
+  "i5_error_analysis": {
+    "figure_id": "i5_error_analysis",
+    "script": "scripts/eval/make_ieee_figures.py",
+    "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+    "source_files": [
+      "results/final-v4/predictions.jsonl"
+    ],
+    "source_sha256": {
+      "results/final-v4/predictions.jsonl": "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+    },
+    "assertions": [
+      "Total FN == 22",
+      "Total FB == 13"
+    ],
+    "pdf_sha256": "d5523bc031bad35ccc5f6be5684cdea3b372a0ffd6e13d8571ddb67124bf9ae7",
+    "png_sha256": "0f2fb131a10a67280698a7393eb1f6209ff37b5afad358d4613a663c46ef22be"
+  },
+  "i6_external_results": {
+    "figure_id": "i6_external_results",
+    "script": "scripts/eval/make_ieee_figures.py",
+    "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+    "source_files": [
+      "export/closeout/external_predictions.jsonl",
+      "export/closeout/notinject_addendum_metrics.json"
+    ],
+    "source_sha256": {
+      "export/closeout/external_predictions.jsonl": "28a06dd87952fe2551fa65a05e3188fa9afb3919afeebde96a5edbe0e1d2c461",
+      "export/closeout/notinject_addendum_metrics.json": "a7c2e8460c3885ddf22df4306031b9f1e9829e8f12dfc6f1688fdbab93542366"
+    },
+    "assertions": [
+      "Gandalf n == 112",
+      "NotInject n == 309",
+      "Dolly n == 200"
+    ],
+    "pdf_sha256": "28aea6d2c0e5ab8cca167e313f892c92ab52bf7a2b13777b7bb9a2d6d5354d7b",
+    "png_sha256": "37ae04bc9fbb293fb2ccd221f53b4c50a5fce63be2aa6617b1af61205e7c2c5d"
+  },
+  "i7_cost_and_pareto": {
+    "figure_id": "i7_cost_and_pareto",
+    "script": "scripts/eval/make_ieee_figures.py",
+    "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+    "source_files": [
+      "numbers.json"
+    ],
+    "source_sha256": {
+      "numbers.json": "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57"
+    },
+    "assertions": [
+      "Arm R calls == 72.33",
+      "All arms non-dominated == True"
+    ],
+    "pdf_sha256": "c0b7d0e87b6ab9087ce0931e27c37c249eddd84df87a4bc81fb0a958905a6aea",
+    "png_sha256": "8213b8145e41126986d5669afe37da4ca3a8666aef3621e47d282b103120eac2"
+  },
+  "arch_pipeline": {
+    "figure_id": "arch_pipeline",
+    "script": "scripts/eval/make_ieee_figures.py",
+    "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+    "source_files": [
+      "parallax/router/learned_router.py",
+      "parallax/challenger/judge.py",
+      "parallax/data/schema.py",
+      "parallax/challenger/challenger_v2.py"
+    ],
+    "source_sha256": {
+      "parallax/router/learned_router.py": "c7122a394282ec6508b7e0d6530b968839f6117862da1e6e7fbc31164b713062",
+      "parallax/challenger/judge.py": "ba0f186e1df76eb5642199cf8de883b5ca5e5d7b912ebc760ed55d51aacb58eb",
+      "parallax/data/schema.py": "4cfcb6ef29599e893074a3c4456d12644fd05c903051cb4c8d751d0888058359",
+      "parallax/challenger/challenger_v2.py": "b7d55c8bec9601c3d4d53b182fa1c0b3778e6f605a2aa15f263bfaf82b807b99"
+    },
+    "assertions": [
+      "tau == 0.35  # learned_router.py:73",
+      "judge num_predict == 128  # judge.py:293",
+      "judge temperature == 0.0  # judge.py:32",
+      "NFKC normalization: schema.py:75; base64/hex are D4 patterns not a pipeline stage",
+      "Policy B: challenger_v2.py:343-456"
+    ],
+    "pdf_sha256": "fffc78fedb884d1f34fe651894ae6c544782639bc2f992b223ead33eadaaf218",
+    "png_sha256": "416f9cc599547877fb8805c84f3d03a76efcce636691f6a8205f58cd448cffd4"
+  },
+  "arch_arms": {
+    "figure_id": "arch_arms",
+    "script": "scripts/eval/make_ieee_figures.py",
+    "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+    "source_files": [
+      "scripts/eval/replay_policy.py"
+    ],
+    "source_sha256": {
+      "scripts/eval/replay_policy.py": "35c63338e5e3e23e863d5b32a0dae510f7ec403d847c490714a419d2f7c2ab26"
+    },
+    "assertions": [
+      "7 arms defined",
+      "8 components mapped"
+    ],
+    "pdf_sha256": "49714928f69222f0c415d1f10da64cca1437114a11b900db60bdce261c727556",
+    "png_sha256": "ee744da345ddb30560d3e0fbdd1bd70af8cadd25b2d5680d719996f5401441e3"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-10-20T07:53:29.638567+00:00",
+  "status": "measured_pending_review",
+  "metadata": {
+    "wave": "Wave H.3 Benchmark (Closeout)",
+    "run_id": "final-v4-20261019-142005-8fb16e",
+    "git_commit": "959a99a",
+    "predictions_sha256": "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444",
+    "split_evaluated": "held_out_v4.jsonl",
+    "sample_size": 347,
+    "attack_count": 139,
+    "benign_count": 208,
+    "timestamps": {
+      "run_utc": "2026-10-19 14:20:05 UTC",
+      "run_ist": "2026-10-19 19:50:05 IST",
+      "file_mtime_ist": "2026-10-19 20:37:16 IST",
+      "protocol_lock_ist": "2026-10-19 19:02:18 IST"
+    },
+    "source_label_map": {
+      "human_submission": "agent_authored_personas (agent-generated)",
+      "adversarial_tools": "adversarial_tools (multi-tool generated)",
+      "in_house_cps": "in_house_cps (in-house industrial synthesis)",
+      "public_catalog": "public_catalog (public datasets)"
+    }
+  },
+  "arms": {
+    "arm_r": {
+      "display_name": "Arm R (Learned Review Router + Policy B)",
+      "role": "Primary System (&tau;=0.35)",
+      "recall_loose": 0.841726618705036,
+      "recall_strict": 0.5827338129496403,
+      "benign_pass_through": 0.6875,
+      "benign_flag_load": 0.25,
+      "benign_block_rate": 0.0625,
+      "extra_calls_per_100": 72.3342939481268,
+      "latency_p50_ms": 5322.59,
+      "status": "measured_pending_review"
+    },
+    "arm_a": {
+      "display_name": "Arm A (Calibrated AnyFlag 3-Detector Ensemble)",
+      "role": "Fast-Path Base Ensemble",
+      "recall_loose": 0.7338129496402878,
+      "recall_strict": 0.7338129496402878,
+      "benign_pass_through": 0.6875,
+      "benign_flag_load": 0.0,
+      "benign_block_rate": 0.3125,
+      "extra_calls_per_100": 0.0,
+      "latency_p50_ms": 11.91,
+      "status": "measured_pending_review"
+    },
+    "arm_b": {
+      "display_name": "Arm B (Discrepancy Trigger + Policy B)",
+      "role": "Heuristic Trigger Baseline",
+      "recall_loose": 0.8992805755395683,
+      "recall_strict": 0.5251798561151079,
+      "benign_pass_through": 0.6875,
+      "benign_flag_load": 0.3076923076923077,
+      "benign_block_rate": 0.004807692307692308,
+      "extra_calls_per_100": 94.52449567723343,
+      "latency_p50_ms": 5771.79,
+      "status": "measured_pending_review"
+    },
+    "arm_u": {
+      "display_name": "Arm U (Challenger-on-All Review)",
+      "role": "Exhaustive Review Upper Bound",
+      "recall_loose": 0.9280575539568345,
+      "recall_strict": 0.5251798561151079,
+      "benign_pass_through": 0.6875,
+      "benign_flag_load": 0.3076923076923077,
+      "benign_block_rate": 0.004807692307692308,
+      "extra_calls_per_100": 100.0,
+      "latency_p50_ms": 5790.44,
+      "status": "measured_pending_review"
+    },
+    "c2_standalone": {
+      "display_name": "Arm C2 (Standalone Gemma 3 4B Judge)",
+      "role": "Direct LLM Arbiter Baseline",
+      "recall_loose": 0.7410071942446043,
+      "recall_strict": 0.6690647482014388,
+      "benign_pass_through": 1.0,
+      "benign_flag_load": 0.0,
+      "benign_block_rate": 0.0,
+      "extra_calls_per_100": 100.0,
+      "latency_p50_ms": 5778.84,
+      "status": "measured_pending_review"
+    },
+    "promptguard2": {
+      "display_name": "Prompt Guard 2 Standalone",
+      "role": "External Meta Baseline",
+      "recall_loose": 0.3237410071942446,
+      "recall_strict": 0.3237410071942446,
+      "benign_pass_through": 0.9182692307692307,
+      "benign_flag_load": 0.0,
+      "benign_block_rate": 0.08173076923076923,
+      "extra_calls_per_100": 0.0,
+      "latency_p50_ms": 67.45,
+      "status": "measured_pending_review"
+    },
+    "promptforest": {
+      "display_name": "PromptForest Live Adapter (8765)",
+      "role": "External Baseline",
+      "recall_loose": 0.04316546762589928,
+      "recall_strict": 0.04316546762589928,
+      "benign_pass_through": 1.0,
+      "benign_flag_load": 0.0,
+      "benign_block_rate": 0.0,
+      "extra_calls_per_100": 0.0,
+      "latency_p50_ms": 2123.09,
+      "status": "measured_pending_review"
+    }
+  },
+  "router_analysis": {
+    "router_auc_vs_label": 0.4350442722744881,
+    "router_should_route_attack_rate": 0.6187050359712231,
+    "router_should_route_benign_rate": 0.7932692307692307,
+    "arm_r_recall_loose": 0.8417266187050358,
+    "random_routing_loose_mean": 0.8747769784172664,
+    "random_routing_loose_ci": [
+      0.8417266187050358,
+      0.9064748201438849
+    ],
+    "arm_r_beats_random": false
+  },
+  "judge_analysis": {
+    "model": "gemma3:4b",
+    "timeout_cap_seconds": 60.0,
+    "outcome_logging": "outcome type was not recorded for the held-out run",
+    "abstains": {
+      "attack": 10,
+      "benign": 0,
+      "total": 10
+    }
+  }
+}

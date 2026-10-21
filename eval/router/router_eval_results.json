@@ -1,0 +1,151 @@
+{
+  "run_id": "router-bench-1791928865",
+  "timestamp": "2026-10-13T22:01:05Z",
+  "selected_arm_a": "any_flag",
+  "fusion_baselines": {
+    "dev": {
+      "any_flag": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "mean": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "majority_vote": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "stacked_logistic": {
+        "recall": 0.6333,
+        "precision": 0.4524,
+        "f1": 0.5278,
+        "fpr": 0.9583
+      }
+    },
+    "held_out": {
+      "any_flag": {
+        "recall": 0.1222,
+        "precision": 1.0,
+        "f1": 0.2178,
+        "fpr": 0.0
+      },
+      "mean": {
+        "recall": 0.0556,
+        "precision": 1.0,
+        "f1": 0.1053,
+        "fpr": 0.0
+      },
+      "majority_vote": {
+        "recall": 0.1222,
+        "precision": 1.0,
+        "f1": 0.2178,
+        "fpr": 0.0
+      },
+      "stacked_logistic": {
+        "recall": 0.8222,
+        "precision": 0.5736,
+        "f1": 0.6758,
+        "fpr": 0.9821
+      }
+    }
+  },
+  "routing_benchmark": {
+    "arm_a_alone": {
+      "recall": 0.1222,
+      "precision": 1.0,
+      "f1": 0.2178,
+      "fpr": 0.0,
+      "routed_count": 0,
+      "extra_calls_per_100": 0.0
+    },
+    "rule_trigger": {
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "routed_count": 135,
+      "extra_calls_per_100": 92.5
+    },
+    "learned_router_arm_r": {
+      "recall": 0.8667,
+      "precision": 1.0,
+      "f1": 0.9286,
+      "fpr": 0.0,
+      "routed_count": 76,
+      "extra_calls_per_100": 52.1
+    },
+    "challenger_on_all_arm_u": {
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "routed_count": 146,
+      "extra_calls_per_100": 100.0
+    }
+  },
+  "cost_curve": [
+    {
+      "threshold": 0.1,
+      "recall": 1.0,
+      "f1": 1.0,
+      "extra_calls_per_100": 71.2,
+      "routed_count": 104
+    },
+    {
+      "threshold": 0.2,
+      "recall": 0.9556,
+      "f1": 0.9773,
+      "extra_calls_per_100": 55.5,
+      "routed_count": 81
+    },
+    {
+      "threshold": 0.3,
+      "recall": 0.8778,
+      "f1": 0.9349,
+      "extra_calls_per_100": 50.7,
+      "routed_count": 74
+    },
+    {
+      "threshold": 0.4,
+      "recall": 0.7333,
+      "f1": 0.8462,
+      "extra_calls_per_100": 41.8,
+      "routed_count": 61
+    },
+    {
+      "threshold": 0.5,
+      "recall": 0.6556,
+      "f1": 0.7919,
+      "extra_calls_per_100": 37.0,
+      "routed_count": 54
+    },
+    {
+      "threshold": 0.6,
+      "recall": 0.6111,
+      "f1": 0.7586,
+      "extra_calls_per_100": 34.2,
+      "routed_count": 50
+    },
+    {
+      "threshold": 0.7,
+      "recall": 0.4778,
+      "f1": 0.6466,
+      "extra_calls_per_100": 26.0,
+      "routed_count": 38
+    },
+    {
+      "threshold": 0.8,
+      "recall": 0.3778,
+      "f1": 0.5484,
+      "extra_calls_per_100": 19.9,
+      "routed_count": 29
+    }
+  ]
+}

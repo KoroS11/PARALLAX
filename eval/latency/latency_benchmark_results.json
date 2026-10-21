@@ -1,0 +1,275 @@
+{
+  "benchmark": "PARALLAX Measured Latency Benchmark (Wave H)",
+  "timestamp": "2026-10-19T04:15:17.519384+00:00",
+  "sessions": {
+    "Session 1": {
+      "description": "Pre-restart benchmark run",
+      "timestamp": "2026-10-19T01:06:21Z",
+      "arms": [
+        "Arm A (3 Detectors Alone)",
+        "Arm B (Rule Trigger + Challenger)",
+        "Arm R (Learned Review Router + Challenger)",
+        "Arm U (Challenger on All Inputs)",
+        "Arm C2 (Standalone Gemma3:4b)",
+        "Arm C3 (Standalone Hlyn-3b)",
+        "Arm C (Standalone Qwen3:8b)",
+        "PromptForest Stock Degraded",
+        "PromptForest Two-Detector",
+        "PromptForest Three-Detector"
+      ]
+    },
+    "Session 2": {
+      "description": "Post-restart benchmark run",
+      "timestamp": "2026-10-19T04:15:17.519384+00:00",
+      "arms": [
+        "Prompt Guard 2 Standalone",
+        "LlamaFirewall PG2"
+      ],
+      "caveat": "Measurements for arms marked 'Session 1 (pre-restart)' were recorded during the initial execution window, while 'Session 2 (post-restart)' reflects post-restart GPU driver and host memory state. Baseline comparisons remain valid under idle host conditions."
+    }
+  },
+  "n_trials": 50,
+  "telemetry": {
+    "cpu_count": 16,
+    "ram_total_gb": 15.68,
+    "ram_free_gb": 1.52,
+    "ram_load_pct": 90,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "total_mb": 4096.0,
+      "used_mb": 1255.0,
+      "free_mb": 2708.0
+    },
+    "ollama_models": []
+  },
+  "results": {
+    "Arm A (3 Detectors Alone)": {
+      "session": "Session 1 (pre-restart)",
+      "cold_ms": 10485.0,
+      "warm_p50_ms": 429.84,
+      "warm_p95_ms": 525.94,
+      "warm_min_ms": 359.14,
+      "warm_max_ms": 593.25,
+      "n_calls": 50,
+      "telemetry": {
+        "timestamp_utc": "2026-10-19T01:06:21Z",
+        "ram_free_gb": 1.9,
+        "ram_load_pct": 88,
+        "gpu_used_mb": 3840.0,
+        "gpu_free_mb": 256.0,
+        "ollama_models": []
+      },
+      "notes": "3 detectors (MiniLM + DeBERTa + Deepset) concurrent fan-out + AnyFlag fusion"
+    },
+    "Arm B (Rule Trigger + Challenger)": {
+      "session": "Session 1 (pre-restart)",
+      "cold_ms": 12166.0,
+      "warm_p50_ms": 4883.0,
+      "warm_p95_ms": 6549.5,
+      "warm_min_ms": 350.4,
+      "warm_max_ms": 7085.0,
+      "n_calls": 50,
+      "telemetry": {
+        "timestamp_utc": "2026-10-19T01:06:53Z",
+        "ram_free_gb": 1.9,
+        "ram_load_pct": 88,
+        "gpu_used_mb": 3840.0,
+        "gpu_free_mb": 256.0,
+        "ollama_models": [
+          "gemma3:4b"
+        ]
+      },
+      "notes": "Rule discrepancy trigger + Challenger Review (gemma3:4b, Policy B)"
+    },
+    "Arm R (Learned Review Router + Challenger)": {
+      "session": "Session 1 (pre-restart)",
+      "cold_ms": 10148.0,
+      "warm_p50_ms": 4870.0,
+      "warm_p95_ms": 6538.9,
+      "warm_min_ms": 362.1,
+      "warm_max_ms": 7759.0,
+      "n_calls": 50,
+      "telemetry": {
+        "timestamp_utc": "2026-10-19T01:11:18Z",
+        "ram_free_gb": 1.9,
+        "ram_load_pct": 88,
+        "gpu_used_mb": 3840.0,
+        "gpu_free_mb": 256.0,
+        "ollama_models": [
+          "gemma3:4b"
+        ]
+      },
+      "notes": "Learned Review Router (3-detector ML classifier) + Challenger Review (gemma3:4b, Policy B)"
+    },
+    "Arm U (Challenger on All Inputs)": {
+      "session": "Session 1 (pre-restart)",
+      "cold_ms": 9968.0,
+      "warm_p50_ms": 4941.5,
+      "warm_p95_ms": 6529.3,
+      "warm_min_ms": 4063.0,
+      "warm_max_ms": 7110.0,
+      "n_calls": 50,
+      "telemetry": {
+        "timestamp_utc": "2026-10-19T01:15:34Z",
+        "ram_free_gb": 1.9,
+        "ram_load_pct": 88,
+        "gpu_used_mb": 3840.0,
+        "gpu_free_mb": 256.0,
+        "ollama_models": [
+          "gemma3:4b"
+        ]
+      },
+      "notes": "Challenger-on-all upper bound (100% calls trigger gemma3:4b review)"
+    },
+    "Arm C2 (Standalone Gemma3:4b)": {
+      "session": "Session 1 (pre-restart)",
+      "cold_ms": 9589.0,
+      "warm_p50_ms": 4685.0,
+      "warm_p95_ms": 5853.45,
+      "warm_min_ms": 3625.0,
+      "warm_max_ms": 5921.0,
+      "n_calls": 50,
+      "telemetry": {
+        "timestamp_utc": "2026-10-19T01:20:01Z",
+        "ram_free_gb": 1.9,
+        "ram_load_pct": 88,
+        "gpu_used_mb": 3840.0,
+        "gpu_free_mb": 256.0,
+        "ollama_models": [
+          "gemma3:4b"
+        ]
+      },
+      "notes": "Standalone Ollama Judge gemma3:4b (thinking disabled, format=json)"
+    },
+    "Arm C3 (Standalone Hlyn-3b)": {
+      "session": "Session 1 (pre-restart)",
+      "cold_ms": 9107.0,
+      "warm_p50_ms": 6201.5,
+      "warm_p95_ms": 9725.95,
+      "warm_min_ms": 2672.0,
+      "warm_max_ms": 10817.0,
+      "n_calls": 50,
+      "telemetry": {
+        "timestamp_utc": "2026-10-19T01:24:07Z",
+        "ram_free_gb": 1.9,
+        "ram_load_pct": 88,
+        "gpu_used_mb": 3840.0,
+        "gpu_free_mb": 256.0,
+        "ollama_models": [
+          "hlyn-labs-3b:latest"
+        ]
+      },
+      "notes": "Standalone Ollama Judge hlyn-labs-3b (thinking disabled, format=json)"
+    },
+    "Arm C (Standalone Qwen3:8b)": {
+      "session": "Session 1 (pre-restart)",
+      "cold_ms": 17686.0,
+      "warm_p50_ms": 13496.0,
+      "warm_p95_ms": 17884.05,
+      "warm_min_ms": 1878.0,
+      "warm_max_ms": 18288.0,
+      "n_calls": 50,
+      "telemetry": {
+        "timestamp_utc": "2026-10-19T01:29:41Z",
+        "ram_free_gb": 1.9,
+        "ram_load_pct": 88,
+        "gpu_used_mb": 3840.0,
+        "gpu_free_mb": 256.0,
+        "ollama_models": [
+          "qwen3:8b"
+        ]
+      },
+      "notes": "Standalone Ollama Judge qwen3:8b (thinking disabled, format=json)"
+    },
+    "PromptForest Stock Degraded": {
+      "session": "Session 1 (pre-restart)",
+      "cold_ms": 0.0,
+      "warm_p50_ms": 189.0,
+      "warm_p95_ms": 305.5,
+      "warm_min_ms": 140.0,
+      "warm_max_ms": 598.0,
+      "n_calls": 50,
+      "telemetry": {
+        "timestamp_utc": "2026-10-19T01:41:17Z",
+        "ram_free_gb": 1.9,
+        "ram_load_pct": 88,
+        "gpu_used_mb": 3840.0,
+        "gpu_free_mb": 256.0,
+        "ollama_models": []
+      },
+      "notes": "PromptForest live daemon on port 8765 (stock degraded verdict)"
+    },
+    "PromptForest Two-Detector": {
+      "session": "Session 1 (pre-restart)",
+      "cold_ms": 0.0,
+      "warm_p50_ms": 177.0,
+      "warm_p95_ms": 278.1,
+      "warm_min_ms": 136.0,
+      "warm_max_ms": 434.0,
+      "n_calls": 50,
+      "telemetry": {
+        "timestamp_utc": "2026-10-19T01:41:29Z",
+        "ram_free_gb": 1.9,
+        "ram_load_pct": 88,
+        "gpu_used_mb": 3840.0,
+        "gpu_free_mb": 256.0,
+        "ollama_models": []
+      },
+      "notes": "PromptForest live daemon on port 8765 (fused 2-detector mode)"
+    },
+    "PromptForest Three-Detector": {
+      "session": "Session 1 (pre-restart)",
+      "cold_ms": 0.0,
+      "warm_p50_ms": 295.0,
+      "warm_p95_ms": 614.85,
+      "warm_min_ms": 182.0,
+      "warm_max_ms": 1937.0,
+      "n_calls": 50,
+      "telemetry": {
+        "timestamp_utc": "2026-10-19T01:41:39Z",
+        "ram_free_gb": 1.9,
+        "ram_load_pct": 88,
+        "gpu_used_mb": 3840.0,
+        "gpu_free_mb": 256.0,
+        "ollama_models": []
+      },
+      "notes": "PromptForest concurrent live daemons on 8765 & 8766 (fused 3-detector mode)"
+    },
+    "Prompt Guard 2 Standalone": {
+      "session": "Session 2 (post-restart)",
+      "cold_ms": 46909.07,
+      "warm_p50_ms": 62.84,
+      "warm_p95_ms": 167.34,
+      "warm_min_ms": 27.96,
+      "warm_max_ms": 743.47,
+      "n_calls": 50,
+      "telemetry": {
+        "timestamp_utc": "2026-10-19T04:14:01.956183+00:00",
+        "ram_free_gb": 1.36,
+        "ram_load_pct": 91,
+        "gpu_used_mb": 1255.0,
+        "gpu_free_mb": 2708.0,
+        "ollama_models": []
+      },
+      "notes": "Meta Prompt Guard 2 86M standalone binary classifier (official weights)"
+    },
+    "LlamaFirewall PG2": {
+      "session": "Session 2 (post-restart)",
+      "cold_ms": 1074.36,
+      "warm_p50_ms": 326.96,
+      "warm_p95_ms": 565.38,
+      "warm_min_ms": 253.73,
+      "warm_max_ms": 1042.81,
+      "n_calls": 50,
+      "telemetry": {
+        "timestamp_utc": "2026-10-19T04:15:15.369974+00:00",
+        "ram_free_gb": 1.51,
+        "ram_load_pct": 90,
+        "gpu_used_mb": 1255.0,
+        "gpu_free_mb": 2708.0,
+        "ollama_models": []
+      },
+      "notes": "Meta LlamaFirewall 1.0.3 PromptGuardScanner (isolated venv, GPU)"
+    }
+  }
+}

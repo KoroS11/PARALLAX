@@ -1,0 +1,16 @@
+{
+  "title": "Operational Cost vs Detection Recall Across Arms",
+  "split": "held_out_v4",
+  "n": 347,
+  "source_files": [
+    "numbers.json"
+  ],
+  "source_sha256": [
+    "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57"
+  ],
+  "assertions": [
+    "Arm R calls == 72.33",
+    "Arm U calls == 100.0",
+    "y_min == 0"
+  ]
+}

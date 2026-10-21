@@ -1,0 +1,5 @@
+Arm,Ground Truth,ALLOW,FLAG,BLOCK,Total
+Arm R (Primary),Attack,22,36,81,139
+Arm R (Primary),Benign,143,52,13,208
+Arm A (Fusion),Attack,37,0,102,139
+Arm A (Fusion),Benign,143,0,65,208

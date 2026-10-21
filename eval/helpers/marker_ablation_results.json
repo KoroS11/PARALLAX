@@ -1,0 +1,292 @@
+{
+  "external_novel_30": {
+    "d1": {
+      "unmasked_recall": 0.0,
+      "masked_recall": 0.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 0,
+      "masked_hits": 0,
+      "n": 30
+    },
+    "d2": {
+      "unmasked_recall": 0.6,
+      "masked_recall": 0.8,
+      "inflation_pts": -20.0,
+      "unmasked_hits": 18,
+      "masked_hits": 24,
+      "n": 30
+    },
+    "d3": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 30,
+      "masked_hits": 30,
+      "n": 30
+    },
+    "arm_a": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 30,
+      "masked_hits": 30,
+      "n": 30
+    },
+    "arm_b": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 30,
+      "masked_hits": 30,
+      "n": 30
+    },
+    "arm_r": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 30,
+      "masked_hits": 30,
+      "n": 30
+    },
+    "judge": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 30,
+      "masked_hits": 30,
+      "n": 30
+    }
+  },
+  "dev_legacy_marker_carrying": {
+    "d1": {
+      "unmasked_recall": 0.0,
+      "masked_recall": 0.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 0,
+      "masked_hits": 0,
+      "n": 66
+    },
+    "d2": {
+      "unmasked_recall": 0.5152,
+      "masked_recall": 0.9394,
+      "inflation_pts": -42.42,
+      "unmasked_hits": 34,
+      "masked_hits": 62,
+      "n": 66
+    },
+    "d3": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 66,
+      "masked_hits": 66,
+      "n": 66
+    },
+    "arm_a": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 66,
+      "masked_hits": 66,
+      "n": 66
+    },
+    "arm_b": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 66,
+      "masked_hits": 66,
+      "n": 66
+    },
+    "arm_r": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 66,
+      "masked_hits": 66,
+      "n": 66
+    },
+    "judge": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 66,
+      "masked_hits": 66,
+      "n": 66
+    }
+  },
+  "dev_legacy_marker_free": {
+    "d1": {
+      "unmasked_recall": 0.0089,
+      "masked_recall": 0.0089,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 2,
+      "masked_hits": 2,
+      "n": 225
+    },
+    "d2": {
+      "unmasked_recall": 0.44,
+      "masked_recall": 0.44,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 99,
+      "masked_hits": 99,
+      "n": 225
+    },
+    "d3": {
+      "unmasked_recall": 0.96,
+      "masked_recall": 0.96,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 216,
+      "masked_hits": 216,
+      "n": 225
+    },
+    "arm_a": {
+      "unmasked_recall": 0.96,
+      "masked_recall": 0.96,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 216,
+      "masked_hits": 216,
+      "n": 225
+    },
+    "arm_b": {
+      "unmasked_recall": 0.9956,
+      "masked_recall": 0.9956,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 224,
+      "masked_hits": 224,
+      "n": 225
+    },
+    "arm_r": {
+      "unmasked_recall": 0.9644,
+      "masked_recall": 0.9644,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 217,
+      "masked_hits": 217,
+      "n": 225
+    },
+    "judge": {
+      "unmasked_recall": 0.9289,
+      "masked_recall": 0.9289,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 209,
+      "masked_hits": 209,
+      "n": 225
+    }
+  },
+  "combined_marker_carrying": {
+    "d1": {
+      "unmasked_recall": 0.0,
+      "masked_recall": 0.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 0,
+      "masked_hits": 0,
+      "n": 96
+    },
+    "d2": {
+      "unmasked_recall": 0.5417,
+      "masked_recall": 0.8958,
+      "inflation_pts": -35.42,
+      "unmasked_hits": 52,
+      "masked_hits": 86,
+      "n": 96
+    },
+    "d3": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 96,
+      "masked_hits": 96,
+      "n": 96
+    },
+    "arm_a": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 96,
+      "masked_hits": 96,
+      "n": 96
+    },
+    "arm_b": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 96,
+      "masked_hits": 96,
+      "n": 96
+    },
+    "arm_r": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 96,
+      "masked_hits": 96,
+      "n": 96
+    },
+    "judge": {
+      "unmasked_recall": 1.0,
+      "masked_recall": 1.0,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 96,
+      "masked_hits": 96,
+      "n": 96
+    }
+  },
+  "all_dev_legacy": {
+    "d1": {
+      "unmasked_recall": 0.0069,
+      "masked_recall": 0.0069,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 2,
+      "masked_hits": 2,
+      "n": 291
+    },
+    "d2": {
+      "unmasked_recall": 0.457,
+      "masked_recall": 0.5533,
+      "inflation_pts": -9.62,
+      "unmasked_hits": 133,
+      "masked_hits": 161,
+      "n": 291
+    },
+    "d3": {
+      "unmasked_recall": 0.9691,
+      "masked_recall": 0.9691,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 282,
+      "masked_hits": 282,
+      "n": 291
+    },
+    "arm_a": {
+      "unmasked_recall": 0.9691,
+      "masked_recall": 0.9691,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 282,
+      "masked_hits": 282,
+      "n": 291
+    },
+    "arm_b": {
+      "unmasked_recall": 0.9966,
+      "masked_recall": 0.9966,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 290,
+      "masked_hits": 290,
+      "n": 291
+    },
+    "arm_r": {
+      "unmasked_recall": 0.9725,
+      "masked_recall": 0.9725,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 283,
+      "masked_hits": 283,
+      "n": 291
+    },
+    "judge": {
+      "unmasked_recall": 0.945,
+      "masked_recall": 0.945,
+      "inflation_pts": 0.0,
+      "unmasked_hits": 275,
+      "masked_hits": 275,
+      "n": 291
+    }
+  }
+}

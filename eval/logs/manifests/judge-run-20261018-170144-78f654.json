@@ -1,0 +1,32 @@
+{
+  "run_id": "judge-run-20261018-170144-78f654",
+  "generated_at": "2026-10-19T05:53:20.160105+00:00",
+  "files": [
+    {
+      "filename": "judge_gemma3_4b.jsonl",
+      "rel_path": "judge-run-20261018-170144-78f654\\judge_gemma3_4b.jsonl",
+      "size_bytes": 1808429,
+      "sha256": "f40b37e93e4982849f5c6b0a48002800b3b5cdb5efa14b9be5682a43840f495f",
+      "num_records": 1467,
+      "split_counts": {
+        "dev": 211,
+        "val": 254,
+        "held_out_v2": 301,
+        "dev_legacy": 591,
+        "external": 110
+      }
+    }
+  ],
+  "total_records": 1467,
+  "split_counts": {
+    "dev": 211,
+    "val": 254,
+    "held_out_v2": 301,
+    "dev_legacy": 591,
+    "external": 110
+  },
+  "model_digests": {
+    "gemma3:4b": "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a"
+  },
+  "template_hashes": {}
+}

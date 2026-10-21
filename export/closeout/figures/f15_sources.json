@@ -1,0 +1,18 @@
+{
+  "title": "Closeout Audit Trail of Methodological Defects + Fix-Forward Items",
+  "split": "Methodology Audit",
+  "n": 9,
+  "source_files": [
+    "docs/METHODOLOGY_FAILURES.md",
+    "docs/CLOSEOUT_TESTLOG.md"
+  ],
+  "source_sha256": [
+    "8d6964829f4cb579efde017ccf40ab43e05589572b3fe57d1a87c4f514d89466",
+    "020b09166001e98fe594e0326b1193dfcde0790921a766b6d9d20a837cfc54ad"
+  ],
+  "assertions": [
+    "All 6 original defects documented in git history",
+    "3 fix-forward items added",
+    "0 banned words in remediation text"
+  ]
+}

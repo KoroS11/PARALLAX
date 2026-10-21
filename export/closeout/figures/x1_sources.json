@@ -1,0 +1,17 @@
+{
+  "title": "Gandalf External Benchmark Recall (ceiling-effect note included)",
+  "split": "external: Gandalf",
+  "n": 112,
+  "source_files": [
+    "export/closeout/external_predictions.jsonl"
+  ],
+  "source_sha256": [
+    "28a06dd87952fe2551fa65a05e3188fa9afb3919afeebde96a5edbe0e1d2c461"
+  ],
+  "assertions": [
+    "Arm R loose recall == 100.00%",
+    "Arm A recall == 100.00%",
+    "y_max == 105",
+    "scored once"
+  ]
+}

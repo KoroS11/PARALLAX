@@ -1,0 +1,8 @@
+Arm,Judge Invocations per 100 Requests,Loose Recall (%)
+Arm R (Primary),72.33,84.17%
+Arm A (post-hoc),0.00,73.38%
+Arm B (post-hoc),94.52,89.93%
+Arm U (post-hoc),100.00,92.81%
+Arm C2 (post-hoc),100.00,74.10%
+PG2 (post-hoc),0.00,32.37%
+PromptForest (post-hoc),0.00,4.32%

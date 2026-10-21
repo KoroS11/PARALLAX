@@ -1,0 +1,17 @@
+{
+  "figure_id": "i5_error_analysis",
+  "script": "scripts/eval/make_ieee_figures.py",
+  "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+  "source_files": [
+    "results/final-v4/predictions.jsonl"
+  ],
+  "source_sha256": {
+    "results/final-v4/predictions.jsonl": "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+  },
+  "assertions": [
+    "Total FN == 22",
+    "Total FB == 13"
+  ],
+  "pdf_sha256": "d5523bc031bad35ccc5f6be5684cdea3b372a0ffd6e13d8571ddb67124bf9ae7",
+  "png_sha256": "0f2fb131a10a67280698a7393eb1f6209ff37b5afad358d4613a663c46ef22be"
+}

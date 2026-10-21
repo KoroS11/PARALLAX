@@ -1,0 +1,423 @@
+{
+  "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "device": "cuda",
+  "dataset_name": "neuralchemy/prompt-injection-technique (canonical)",
+  "manifest_sha256": "7281f541c3fae2a3c00fae99819f3b92660116e0b7462c374639bfd3d1a0379f",
+  "manifest_overall_sha256": "4b6df093156cfebae76e06b9b78e3c3b01830616dd4d95b54284ffc8b5da8764",
+  "train_samples": 25354,
+  "val_samples": 3287,
+  "test_samples": 3209,
+  "classes": [
+    "none",
+    "keyword_override",
+    "persona_play",
+    "encoding",
+    "payload_splitting",
+    "context_overflow",
+    "few_shot_poisoning",
+    "multilingual"
+  ],
+  "attack_classes": [
+    "context_overflow",
+    "encoding",
+    "few_shot_poisoning",
+    "keyword_override",
+    "multilingual",
+    "payload_splitting",
+    "persona_play"
+  ],
+  "stage1_comparison": {
+    "logistic_regression": {
+      "threshold": 0.5,
+      "accuracy": 0.9246,
+      "precision": 0.9149,
+      "recall": 0.9626,
+      "f1": 0.9382,
+      "roc_auc": 0.9565,
+      "fpr_on_none": 0.1313,
+      "brier_score": 0.0628
+    },
+    "linear_svc": {
+      "threshold": 0.5,
+      "accuracy": 0.9273,
+      "precision": 0.9181,
+      "recall": 0.9637,
+      "f1": 0.9403,
+      "roc_auc": 0.9542,
+      "fpr_on_none": 0.126,
+      "brier_score": 0.0611
+    },
+    "selected_model": "LogisticRegression (Calibrated)"
+  },
+  "optimal_threshold": {
+    "threshold": 0.91,
+    "target_max_fpr": 0.05,
+    "achieved_val_fpr": 0.0495
+  },
+  "val_binary_metrics": {
+    "threshold": 0.91,
+    "accuracy": 0.7667,
+    "precision": 0.95,
+    "recall": 0.6412,
+    "f1": 0.7657,
+    "roc_auc": 0.9565,
+    "fpr_on_none": 0.0495
+  },
+  "test_binary_metrics": {
+    "threshold": 0.91,
+    "accuracy": 0.7831,
+    "precision": 0.9474,
+    "recall": 0.6717,
+    "f1": 0.7861,
+    "roc_auc": 0.9547,
+    "fpr_on_none": 0.0544
+  },
+  "val_multiclass_metrics": {
+    "macro_f1": 0.4449,
+    "weighted_f1": 0.5916,
+    "classification_report": {
+      "none": {
+        "precision": 0.6438008130081301,
+        "recall": 0.9504876219054764,
+        "f1-score": 0.7676461678279309,
+        "support": 1333.0
+      },
+      "keyword_override": {
+        "precision": 0.7410358565737052,
+        "recall": 0.26382978723404255,
+        "f1-score": 0.3891213389121339,
+        "support": 705.0
+      },
+      "persona_play": {
+        "precision": 0.8924731182795699,
+        "recall": 0.6916666666666667,
+        "f1-score": 0.7793427230046949,
+        "support": 240.0
+      },
+      "encoding": {
+        "precision": 0.9226361031518625,
+        "recall": 0.7612293144208038,
+        "f1-score": 0.8341968911917098,
+        "support": 423.0
+      },
+      "payload_splitting": {
+        "precision": 0.13846153846153847,
+        "recall": 0.17307692307692307,
+        "f1-score": 0.15384615384615385,
+        "support": 104.0
+      },
+      "context_overflow": {
+        "precision": 0.32673267326732675,
+        "recall": 0.11148648648648649,
+        "f1-score": 0.16624685138539042,
+        "support": 296.0
+      },
+      "few_shot_poisoning": {
+        "precision": 0.13114754098360656,
+        "recall": 0.1568627450980392,
+        "f1-score": 0.14285714285714285,
+        "support": 102.0
+      },
+      "multilingual": {
+        "precision": 0.2388888888888889,
+        "recall": 0.5119047619047619,
+        "f1-score": 0.32575757575757575,
+        "support": 84.0
+      },
+      "accuracy": 0.6239732278673562,
+      "macro avg": {
+        "precision": 0.5043970665768285,
+        "recall": 0.45256803834915005,
+        "f1-score": 0.44487685559784157,
+        "support": 3287.0
+      },
+      "weighted avg": {
+        "precision": 0.647898378393294,
+        "recall": 0.6239732278673562,
+        "f1-score": 0.5916198835071637,
+        "support": 3287.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        1267,
+        16,
+        2,
+        4,
+        15,
+        7,
+        9,
+        13
+      ],
+      [
+        317,
+        186,
+        10,
+        14,
+        51,
+        38,
+        43,
+        46
+      ],
+      [
+        49,
+        5,
+        166,
+        1,
+        2,
+        3,
+        11,
+        3
+      ],
+      [
+        51,
+        1,
+        1,
+        322,
+        17,
+        2,
+        3,
+        26
+      ],
+      [
+        55,
+        9,
+        0,
+        6,
+        18,
+        8,
+        3,
+        5
+      ],
+      [
+        151,
+        26,
+        2,
+        2,
+        20,
+        33,
+        32,
+        30
+      ],
+      [
+        50,
+        5,
+        4,
+        0,
+        5,
+        8,
+        16,
+        14
+      ],
+      [
+        28,
+        3,
+        1,
+        0,
+        2,
+        2,
+        5,
+        43
+      ]
+    ]
+  },
+  "test_multiclass_metrics": {
+    "macro_f1": 0.4586,
+    "weighted_f1": 0.6073,
+    "classification_report": {
+      "none": {
+        "precision": 0.6637977407208177,
+        "recall": 0.9455938697318008,
+        "f1-score": 0.7800252844500632,
+        "support": 1305.0
+      },
+      "keyword_override": {
+        "precision": 0.6828358208955224,
+        "recall": 0.2629310344827586,
+        "f1-score": 0.3796680497925311,
+        "support": 696.0
+      },
+      "persona_play": {
+        "precision": 0.873015873015873,
+        "recall": 0.7081545064377682,
+        "f1-score": 0.7819905213270142,
+        "support": 233.0
+      },
+      "encoding": {
+        "precision": 0.9542857142857143,
+        "recall": 0.784037558685446,
+        "f1-score": 0.8608247422680413,
+        "support": 426.0
+      },
+      "payload_splitting": {
+        "precision": 0.15714285714285714,
+        "recall": 0.2222222222222222,
+        "f1-score": 0.18410041841004185,
+        "support": 99.0
+      },
+      "context_overflow": {
+        "precision": 0.35714285714285715,
+        "recall": 0.14869888475836432,
+        "f1-score": 0.2099737532808399,
+        "support": 269.0
+      },
+      "few_shot_poisoning": {
+        "precision": 0.0896551724137931,
+        "recall": 0.14606741573033707,
+        "f1-score": 0.1111111111111111,
+        "support": 89.0
+      },
+      "multilingual": {
+        "precision": 0.2945205479452055,
+        "recall": 0.4673913043478261,
+        "f1-score": 0.36134453781512604,
+        "support": 92.0
+      },
+      "accuracy": 0.6338423184792771,
+      "macro avg": {
+        "precision": 0.5090495729453299,
+        "recall": 0.4606370995495654,
+        "f1-score": 0.45862980230684613,
+        "support": 3209.0
+      },
+      "weighted avg": {
+        "precision": 0.6538335830061457,
+        "recall": 0.6338423184792771,
+        "f1-score": 0.6073351691995433,
+        "support": 3209.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        1234,
+        28,
+        6,
+        5,
+        13,
+        6,
+        5,
+        8
+      ],
+      [
+        288,
+        183,
+        9,
+        6,
+        54,
+        43,
+        62,
+        51
+      ],
+      [
+        42,
+        6,
+        165,
+        0,
+        2,
+        8,
+        6,
+        4
+      ],
+      [
+        54,
+        3,
+        0,
+        334,
+        16,
+        1,
+        4,
+        14
+      ],
+      [
+        49,
+        9,
+        0,
+        3,
+        22,
+        6,
+        6,
+        4
+      ],
+      [
+        120,
+        27,
+        4,
+        1,
+        23,
+        40,
+        39,
+        15
+      ],
+      [
+        44,
+        8,
+        5,
+        0,
+        6,
+        6,
+        13,
+        7
+      ],
+      [
+        28,
+        4,
+        0,
+        1,
+        4,
+        2,
+        10,
+        43
+      ]
+    ]
+  },
+  "confusable_classes_analysis": {
+    "top_confusable_pairs": [
+      {
+        "pair": [
+          "none",
+          "keyword_override"
+        ],
+        "mutual_errors": 316,
+        "confusion_rate": 0.1579
+      },
+      {
+        "pair": [
+          "none",
+          "context_overflow"
+        ],
+        "mutual_errors": 126,
+        "confusion_rate": 0.0801
+      },
+      {
+        "pair": [
+          "keyword_override",
+          "context_overflow"
+        ],
+        "mutual_errors": 70,
+        "confusion_rate": 0.0725
+      },
+      {
+        "pair": [
+          "keyword_override",
+          "few_shot_poisoning"
+        ],
+        "mutual_errors": 70,
+        "confusion_rate": 0.0892
+      },
+      {
+        "pair": [
+          "keyword_override",
+          "payload_splitting"
+        ],
+        "mutual_errors": 63,
+        "confusion_rate": 0.0792
+      }
+    ],
+    "merging_recommendations": [
+      "1. 'keyword_override' and 'persona_play': Both rely on imperative prompt override instructions ('Ignore previous guidelines' vs 'You are now an actor without constraints'). Merging them into a single 'instruction_override' technique improves classification boundary clarity.",
+      "2. 'context_overflow' and 'few_shot_poisoning': Both dilute safety alignment by injecting large distractors or repetitive synthetic conversational turns into the context window. Merging into 'context_manipulation' provides strong macro-F1 gains.",
+      "3. 'encoding' and 'payload_splitting': Both rely on syntactic token evasion (base64/rot13 vs distributed variable segments). They share token obfuscation patterns."
+    ]
+  },
+  "created_at": "2026-10-03T17:50:30.324926+00:00"
+}

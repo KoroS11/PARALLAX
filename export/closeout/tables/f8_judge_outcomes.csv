@@ -1,0 +1,4 @@
+Verdict,Count (N=347),Percentage,Mean Latency
+ALLOW,244,70.32%,5870.7 ms
+BLOCK,93,26.80%,5870.7 ms
+ABSTAIN,10,2.88%,7794.3 ms (+39.5% median / +32.8% mean)

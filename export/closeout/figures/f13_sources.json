@@ -1,0 +1,15 @@
+{
+  "title": "Detector by Dataset Contamination Matrix",
+  "split": "Design / External Candidates",
+  "n": 6,
+  "source_files": [
+    "docs/EXTERNAL_DATASET_REVIEW.md"
+  ],
+  "source_sha256": [
+    "a20855e7ae3f6f93cdc68ddf92a89ef213c0ce6371ebff12b605952291a77b9d"
+  ],
+  "assertions": [
+    "D2 XSTest overlap == True",
+    "D3 deepset overlap == True"
+  ]
+}

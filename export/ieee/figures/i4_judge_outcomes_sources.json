@@ -1,0 +1,17 @@
+{
+  "figure_id": "i4_judge_outcomes",
+  "script": "scripts/eval/make_ieee_figures.py",
+  "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+  "source_files": [
+    "results/final-v4/predictions.jsonl"
+  ],
+  "source_sha256": {
+    "results/final-v4/predictions.jsonl": "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+  },
+  "assertions": [
+    "Abstain count == 10",
+    "Median latency delta == 39.5%"
+  ],
+  "pdf_sha256": "c8310dc702fc7d18ec06d4254c3a4630903a18fd1e09e4bbc8eb69da5dbf97ff",
+  "png_sha256": "2daa5e4592ea338be3ee65ae1f9c2454e76f8a0f00740a402ee78d94733dc980"
+}

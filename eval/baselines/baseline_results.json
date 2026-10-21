@@ -1,0 +1,145 @@
+{
+  "benchmark": "PARALLAX Baselines (PromptForest, Prompt Guard 2, LlamaFirewall)",
+  "timestamp": "2026-10-18T06:59:58.253587+00:00",
+  "live_components": [
+    "promptforest@127.0.0.1:8765",
+    "meta-llama/Llama-Prompt-Guard-2-86M"
+  ],
+  "versions": {
+    "promptforest": "1.0.0",
+    "llama_guard": "Appleroll-Research/PromptForest-Llama-Prompt-Guard-2-86M",
+    "xgboost": "all-MiniLM-L6-v2",
+    "promptguard2": "meta-llama/Llama-Prompt-Guard-2-86M",
+    "llamafirewall": "1.0.3"
+  },
+  "results": [
+    {
+      "name": "PromptForest 1.0.0 (Stock Degraded Mode)",
+      "status": "evaluated",
+      "total_samples": 170,
+      "attack_samples": 90,
+      "benign_samples": 80,
+      "recall": 0.1667,
+      "precision": 1.0,
+      "f1": 0.2857,
+      "fpr": 0.0,
+      "asr": 0.8333,
+      "p50_latency_ms": 2119.26,
+      "p95_latency_ms": 2148.93,
+      "loaded_detectors": [
+        "llama_guard",
+        "xgboost"
+      ],
+      "live_components": [
+        "promptforest@127.0.0.1:8765 (cpu)"
+      ],
+      "evaluation_mode": "stock_degraded",
+      "run_id": "pf-live-3cc1d7a0",
+      "version": "1.0.0",
+      "license": "",
+      "live_status": "live",
+      "notes": "Live server evaluation using stock server is_malicious verdict. Vijil model missing from Hub, counted as 0.0 phantom vote in stock server."
+    },
+    {
+      "name": "PromptForest 1.0.0 (Two-Detector PARALLAX Mode)",
+      "status": "evaluated",
+      "total_samples": 170,
+      "attack_samples": 90,
+      "benign_samples": 80,
+      "recall": 0.0222,
+      "precision": 1.0,
+      "f1": 0.0435,
+      "fpr": 0.0,
+      "asr": 0.9778,
+      "p50_latency_ms": 2342.58,
+      "p95_latency_ms": 2363.01,
+      "loaded_detectors": [
+        "llama_guard",
+        "xgboost"
+      ],
+      "live_components": [
+        "promptforest@127.0.0.1:8765 (cpu)"
+      ],
+      "evaluation_mode": "two_detector",
+      "run_id": "pf-live-f11b7ed2",
+      "version": "1.0.0",
+      "license": "",
+      "live_status": "live",
+      "notes": "Live server evaluation via PARALLAX adapter. Filters details directly; computes fused mean over available detectors (llama_guard + xgboost)."
+    },
+    {
+      "name": "Vijil v5 Substituted (vijil/prompt-injection-v5-20260827)",
+      "status": "unavailable_gated",
+      "total_samples": 0,
+      "attack_samples": 0,
+      "benign_samples": 0,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0,
+      "fpr": 0.0,
+      "asr": 0.0,
+      "p50_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "loaded_detectors": [],
+      "live_components": [],
+      "evaluation_mode": "vijil_v5_substituted",
+      "run_id": "",
+      "version": "1.0.0",
+      "license": "",
+      "live_status": "live",
+      "notes": "Candidate replacement vijil/prompt-injection-v5-20260827 is GATED on HuggingFace Hub (access pending, custom mmBERT architecture, separate tokenizer). Per Wave F principle: not used until access granted and validated. No mock data."
+    },
+    {
+      "name": "Prompt Guard 2 Alone (meta-llama/Llama-Prompt-Guard-2-86M)",
+      "status": "evaluated",
+      "total_samples": 170,
+      "attack_samples": 90,
+      "benign_samples": 80,
+      "recall": 0.1778,
+      "precision": 1.0,
+      "f1": 0.3019,
+      "fpr": 0.0,
+      "asr": 0.8222,
+      "p50_latency_ms": 62.33,
+      "p95_latency_ms": 76.83,
+      "loaded_detectors": [
+        "meta-llama/Llama-Prompt-Guard-2-86M"
+      ],
+      "live_components": [
+        "meta-llama/Llama-Prompt-Guard-2-86M"
+      ],
+      "evaluation_mode": "standalone_pg2_live",
+      "run_id": "pg2-live-988c7dce",
+      "version": "86M",
+      "license": "Llama 3 Community License",
+      "live_status": "live",
+      "notes": "Standalone evaluation of official Meta Prompt Guard 2 86M weights (separate from PromptForest Appleroll fine-tune)."
+    },
+    {
+      "name": "LlamaFirewall 1.0.3 PromptGuardScanner",
+      "status": "evaluated",
+      "total_samples": 170,
+      "attack_samples": 90,
+      "benign_samples": 80,
+      "recall": 0.2,
+      "precision": 1.0,
+      "f1": 0.3333,
+      "fpr": 0.0,
+      "asr": 0.8,
+      "p50_latency_ms": 286.083,
+      "p95_latency_ms": 1570.684,
+      "loaded_detectors": [
+        "llamafirewall.PromptGuardScanner"
+      ],
+      "live_components": [
+        "meta-llama/Llama-Prompt-Guard-2-86M"
+      ],
+      "evaluation_mode": "promptguard2_live",
+      "run_id": "llamafw-pg2-75f0fb74",
+      "version": "1.0.3",
+      "license": "MIT (LlamaFirewall) / Llama 3 Community License (Weights)",
+      "live_status": "live",
+      "notes": "Live evaluation against authenticated Meta Prompt Guard 2 model."
+    }
+  ]
+}

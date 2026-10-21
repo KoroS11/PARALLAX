@@ -1,0 +1,6 @@
+Verdict / Metric,Value,Percentage / Note
+ALLOW,517,83.25%
+BLOCK,103,16.59%
+ABSTAIN,1,0.16%
+Mean Latency,4274.8 ms,
+Median Latency,4242.1 ms,

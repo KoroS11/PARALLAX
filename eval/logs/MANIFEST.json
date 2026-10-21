@@ -1,0 +1,119 @@
+{
+  "generated_at": "2026-10-18T13:40:00Z",
+  "files": [
+    {
+      "rel_path": "judge-run-20261018-115436-843fc2\\judge_gemma3_4b.jsonl",
+      "size_bytes": 4168,
+      "sha256": "57eea87f20e424b4d64682895530a7791f7a835a09c69b62a49e6539497306a3",
+      "num_records": 4
+    },
+    {
+      "rel_path": "judge-run-20261018-115509-133d2b\\judge_gemma3_4b.jsonl",
+      "size_bytes": 465305,
+      "sha256": "8308646bc601b64d0186d482e0ae07c7bb155cc83fed5eb08814a8b97b9e4e3c",
+      "num_records": 456
+    },
+    {
+      "rel_path": "judge-run-20261018-160726-0b9cd7\\judge_gemma3_4b.jsonl",
+      "size_bytes": 7429,
+      "sha256": "42ceac398655aa26edd673ecc8b1950965fbda3b620562a2ed551c48e50063e8",
+      "num_records": 5
+    },
+    {
+      "rel_path": "judge-run-20261018-160726-0b9cd7\\judge_hlyn-labs-3b_latest.jsonl",
+      "size_bytes": 6524,
+      "sha256": "b74e5c6dae16fa75d75c29439e22ba680ef0a6b5e2635bbed166f4fc16a17026",
+      "num_records": 5
+    },
+    {
+      "rel_path": "judge-run-20261018-160726-0b9cd7\\judge_qwen3_8b.jsonl",
+      "size_bytes": 6490,
+      "sha256": "a181c9337af049d33e753715115fccc52e468a96b1e8e9bc4c94af6bd174f4b4",
+      "num_records": 5
+    },
+    {
+      "rel_path": "judge-run-20261018-161238-d15a76\\judge_gemma3_4b.jsonl",
+      "size_bytes": 564546,
+      "sha256": "8c28ef1996718999ab2c5a653725d35bfa685a4c81754499a55315e073f875e2",
+      "num_records": 465
+    },
+    {
+      "rel_path": "judge-run-20261018-164653-26ca5b\\judge_hlyn-labs-3b_latest.jsonl",
+      "size_bytes": 65605,
+      "sha256": "41e2c7fe41c8cb63864e7e9d0ffd9715ad3acb84855ba6f3cfead860965536ec",
+      "num_records": 50
+    },
+    {
+      "rel_path": "judge-run-20261018-165110-bf4ede\\judge_qwen3_8b.jsonl",
+      "size_bytes": 38155,
+      "sha256": "74e8673ebf3ea09993c1ab491abf07a99f6ce54599d3f40ce6b8c9a8c9c0464b",
+      "num_records": 30
+    },
+    {
+      "rel_path": "judge-run-20261018-165723-c97131\\judge_gemma3_4b.jsonl",
+      "size_bytes": 62995,
+      "sha256": "e1ae24376ea6a4e4550b26c1b89d4e2f77b1e011cd16d88669d6fd68f992d5db",
+      "num_records": 50
+    },
+    {
+      "rel_path": "judge-run-20261018-170144-78f654\\judge_gemma3_4b.jsonl",
+      "size_bytes": 1808429,
+      "sha256": "f40b37e93e4982849f5c6b0a48002800b3b5cdb5efa14b9be5682a43840f495f",
+      "num_records": 1467
+    },
+    {
+      "rel_path": "judge-run-20261019-054544-fc2581\\judge_gemma3_4b.jsonl",
+      "size_bytes": 114994,
+      "sha256": "f68740c31b53eb419410f78764d1c90abdb75388f523395d836831a9f006b7b4",
+      "num_records": 96
+    },
+    {
+      "rel_path": "latest_judge_gemma3_4b.jsonl",
+      "size_bytes": 114994,
+      "sha256": "f68740c31b53eb419410f78764d1c90abdb75388f523395d836831a9f006b7b4",
+      "num_records": 96
+    },
+    {
+      "rel_path": "latest_judge_hlyn-labs-3b_latest.jsonl",
+      "size_bytes": 65605,
+      "sha256": "41e2c7fe41c8cb63864e7e9d0ffd9715ad3acb84855ba6f3cfead860965536ec",
+      "num_records": 50
+    },
+    {
+      "rel_path": "latest_judge_qwen3_8b.jsonl",
+      "size_bytes": 38155,
+      "sha256": "74e8673ebf3ea09993c1ab491abf07a99f6ce54599d3f40ce6b8c9a8c9c0464b",
+      "num_records": 30
+    },
+    {
+      "rel_path": "sample_judge_gemma3_4b.jsonl",
+      "size_bytes": 13521,
+      "sha256": "9bed4d73dc03a8039a3a772f84731fb5e04ba0bc69800263f2a641f0c8a74df4",
+      "num_records": 10
+    },
+    {
+      "rel_path": "sample_judge_hlyn-labs-3b_latest.jsonl",
+      "size_bytes": 13032,
+      "sha256": "24edcea87788cb10e2aa99218b7909fb3dc49a37c7840a5ea739b86a702d8629",
+      "num_records": 10
+    },
+    {
+      "rel_path": "sample_judge_qwen3_8b.jsonl",
+      "size_bytes": 13488,
+      "sha256": "c1565e8c31ca3fb58c3b01c04756450881b0fcb0c37f93d9dd4608dda227bc6b",
+      "num_records": 10
+    },
+    {
+      "rel_path": "adaptive\\adaptive-14fe6ce0\\trials.jsonl",
+      "size_bytes": 412454,
+      "sha256": "5947140156693cbde85a8e95d30e9033fdcbe1ef64cb8e9a6030612ce9f06526",
+      "num_records": 615
+    },
+    {
+      "rel_path": "final-run-20261019-071416-ddc4ec\\predictions.jsonl",
+      "size_bytes": 39487,
+      "sha256": "ae9b19eef0b14687af5e3f10c4a6a3e0f9da6849155cd5a55fe9cbc110672f2e",
+      "num_records": 46
+    }
+  ]
+}

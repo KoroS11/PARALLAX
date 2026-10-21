@@ -1,0 +1,549 @@
+{
+  "metadata": {
+    "title": "NotInject Subgroup & Category Decomposition (Post-Hoc Addendum)",
+    "total_notinject_rows": 309,
+    "raw_category_multilingual_queries_count": 0,
+    "raw_category_multilingual_count": 84,
+    "stored_category_counts": {
+      "Multilingual": 84,
+      "Common Queries": 117,
+      "Virtual Creation": 40,
+      "Technique Queries": 68
+    },
+    "stored_subset_counts": {
+      "NotInject_one": 101,
+      "NotInject_two": 101,
+      "NotInject_three": 107
+    },
+    "english_partition_status": "derived (all rows where category != 'Multilingual')",
+    "k13_select_specification": "K13_SELECT.txt names 'Multilingual Queries' per card taxonomy, but the dataset stores 'Multilingual'; original split was empty because of that string mismatch.",
+    "root_cause_empty_original_split": "scripts/eval/external_metrics.py checked category == 'Multilingual Queries', which matches 0 rows in notinject.jsonl (category is 'Multilingual', n=84), and prediction records did not copy the category field from raw inputs."
+  },
+  "partitions": {
+    "english": {
+      "sample_size": 225,
+      "arms": {
+        "arm_r": {
+          "allow": 125,
+          "flag": 60,
+          "block": 40,
+          "pass_through_rate": 0.5556,
+          "pass_through_95ci": [
+            0.4902,
+            0.619
+          ],
+          "false_block_rate": 0.1778,
+          "false_block_95ci": [
+            0.1334,
+            0.233
+          ],
+          "flag_rate": 0.2667,
+          "flag_95ci": [
+            0.2132,
+            0.328
+          ]
+        },
+        "arm_a": {
+          "allow": 127,
+          "flag": 0,
+          "block": 98,
+          "pass_through_rate": 0.5644,
+          "pass_through_95ci": [
+            0.4991,
+            0.6276
+          ],
+          "false_block_rate": 0.4356,
+          "false_block_95ci": [
+            0.3724,
+            0.5009
+          ],
+          "flag_rate": 0.0,
+          "flag_95ci": [
+            0.0,
+            0.0168
+          ]
+        },
+        "arm_b": {
+          "allow": 125,
+          "flag": 89,
+          "block": 11,
+          "pass_through_rate": 0.5556,
+          "pass_through_95ci": [
+            0.4902,
+            0.619
+          ],
+          "false_block_rate": 0.0489,
+          "false_block_95ci": [
+            0.0275,
+            0.0854
+          ],
+          "flag_rate": 0.3956,
+          "flag_95ci": [
+            0.3339,
+            0.4607
+          ]
+        },
+        "arm_u": {
+          "allow": 125,
+          "flag": 89,
+          "block": 11,
+          "pass_through_rate": 0.5556,
+          "pass_through_95ci": [
+            0.4902,
+            0.619
+          ],
+          "false_block_rate": 0.0489,
+          "false_block_95ci": [
+            0.0275,
+            0.0854
+          ],
+          "flag_rate": 0.3956,
+          "flag_95ci": [
+            0.3339,
+            0.4607
+          ]
+        },
+        "c2_standalone": {
+          "allow": 216,
+          "flag": 0,
+          "block": 9,
+          "pass_through_rate": 0.96,
+          "pass_through_95ci": [
+            0.9257,
+            0.9788
+          ],
+          "false_block_rate": 0.04,
+          "false_block_95ci": [
+            0.0212,
+            0.0743
+          ],
+          "flag_rate": 0.0,
+          "flag_95ci": [
+            0.0,
+            0.0168
+          ]
+        }
+      }
+    },
+    "multilingual": {
+      "sample_size": 84,
+      "arms": {
+        "arm_r": {
+          "allow": 12,
+          "flag": 50,
+          "block": 22,
+          "pass_through_rate": 0.1429,
+          "pass_through_95ci": [
+            0.0837,
+            0.2333
+          ],
+          "false_block_rate": 0.2619,
+          "false_block_95ci": [
+            0.1798,
+            0.3648
+          ],
+          "flag_rate": 0.5952,
+          "flag_95ci": [
+            0.4883,
+            0.6938
+          ]
+        },
+        "arm_a": {
+          "allow": 12,
+          "flag": 0,
+          "block": 72,
+          "pass_through_rate": 0.1429,
+          "pass_through_95ci": [
+            0.0837,
+            0.2333
+          ],
+          "false_block_rate": 0.8571,
+          "false_block_95ci": [
+            0.7667,
+            0.9163
+          ],
+          "flag_rate": 0.0,
+          "flag_95ci": [
+            0.0,
+            0.0437
+          ]
+        },
+        "arm_b": {
+          "allow": 12,
+          "flag": 54,
+          "block": 18,
+          "pass_through_rate": 0.1429,
+          "pass_through_95ci": [
+            0.0837,
+            0.2333
+          ],
+          "false_block_rate": 0.2143,
+          "false_block_95ci": [
+            0.1401,
+            0.3135
+          ],
+          "flag_rate": 0.6429,
+          "flag_95ci": [
+            0.5362,
+            0.737
+          ]
+        },
+        "arm_u": {
+          "allow": 12,
+          "flag": 54,
+          "block": 18,
+          "pass_through_rate": 0.1429,
+          "pass_through_95ci": [
+            0.0837,
+            0.2333
+          ],
+          "false_block_rate": 0.2143,
+          "false_block_95ci": [
+            0.1401,
+            0.3135
+          ],
+          "flag_rate": 0.6429,
+          "flag_95ci": [
+            0.5362,
+            0.737
+          ]
+        },
+        "c2_standalone": {
+          "allow": 83,
+          "flag": 0,
+          "block": 1,
+          "pass_through_rate": 0.9881,
+          "pass_through_95ci": [
+            0.9356,
+            0.9979
+          ],
+          "false_block_rate": 0.0119,
+          "false_block_95ci": [
+            0.0021,
+            0.0644
+          ],
+          "flag_rate": 0.0,
+          "flag_95ci": [
+            0.0,
+            0.0437
+          ]
+        }
+      }
+    },
+    "notinject_one": {
+      "sample_size": 101,
+      "arms": {
+        "arm_r": {
+          "allow": 69,
+          "flag": 24,
+          "block": 8,
+          "pass_through_rate": 0.6832,
+          "pass_through_95ci": [
+            0.5871,
+            0.7658
+          ],
+          "false_block_rate": 0.0792,
+          "false_block_95ci": [
+            0.0407,
+            0.1486
+          ],
+          "flag_rate": 0.2376,
+          "flag_95ci": [
+            0.1652,
+            0.3293
+          ]
+        },
+        "arm_a": {
+          "allow": 70,
+          "flag": 0,
+          "block": 31,
+          "pass_through_rate": 0.6931,
+          "pass_through_95ci": [
+            0.5974,
+            0.7746
+          ],
+          "false_block_rate": 0.3069,
+          "false_block_95ci": [
+            0.2254,
+            0.4026
+          ],
+          "flag_rate": 0.0,
+          "flag_95ci": [
+            0.0,
+            0.0366
+          ]
+        },
+        "arm_b": {
+          "allow": 69,
+          "flag": 29,
+          "block": 3,
+          "pass_through_rate": 0.6832,
+          "pass_through_95ci": [
+            0.5871,
+            0.7658
+          ],
+          "false_block_rate": 0.0297,
+          "false_block_95ci": [
+            0.0102,
+            0.0837
+          ],
+          "flag_rate": 0.2871,
+          "flag_95ci": [
+            0.208,
+            0.3819
+          ]
+        },
+        "arm_u": {
+          "allow": 69,
+          "flag": 29,
+          "block": 3,
+          "pass_through_rate": 0.6832,
+          "pass_through_95ci": [
+            0.5871,
+            0.7658
+          ],
+          "false_block_rate": 0.0297,
+          "false_block_95ci": [
+            0.0102,
+            0.0837
+          ],
+          "flag_rate": 0.2871,
+          "flag_95ci": [
+            0.208,
+            0.3819
+          ]
+        },
+        "c2_standalone": {
+          "allow": 99,
+          "flag": 0,
+          "block": 2,
+          "pass_through_rate": 0.9802,
+          "pass_through_95ci": [
+            0.9307,
+            0.9946
+          ],
+          "false_block_rate": 0.0198,
+          "false_block_95ci": [
+            0.0054,
+            0.0693
+          ],
+          "flag_rate": 0.0,
+          "flag_95ci": [
+            0.0,
+            0.0366
+          ]
+        }
+      }
+    },
+    "notinject_two": {
+      "sample_size": 101,
+      "arms": {
+        "arm_r": {
+          "allow": 42,
+          "flag": 35,
+          "block": 24,
+          "pass_through_rate": 0.4158,
+          "pass_through_95ci": [
+            0.3245,
+            0.5133
+          ],
+          "false_block_rate": 0.2376,
+          "false_block_95ci": [
+            0.1652,
+            0.3293
+          ],
+          "flag_rate": 0.3465,
+          "flag_95ci": [
+            0.2609,
+            0.4434
+          ]
+        },
+        "arm_a": {
+          "allow": 42,
+          "flag": 0,
+          "block": 59,
+          "pass_through_rate": 0.4158,
+          "pass_through_95ci": [
+            0.3245,
+            0.5133
+          ],
+          "false_block_rate": 0.5842,
+          "false_block_95ci": [
+            0.4867,
+            0.6755
+          ],
+          "flag_rate": 0.0,
+          "flag_95ci": [
+            0.0,
+            0.0366
+          ]
+        },
+        "arm_b": {
+          "allow": 42,
+          "flag": 48,
+          "block": 11,
+          "pass_through_rate": 0.4158,
+          "pass_through_95ci": [
+            0.3245,
+            0.5133
+          ],
+          "false_block_rate": 0.1089,
+          "false_block_95ci": [
+            0.0619,
+            0.1846
+          ],
+          "flag_rate": 0.4752,
+          "flag_95ci": [
+            0.3806,
+            0.5717
+          ]
+        },
+        "arm_u": {
+          "allow": 42,
+          "flag": 48,
+          "block": 11,
+          "pass_through_rate": 0.4158,
+          "pass_through_95ci": [
+            0.3245,
+            0.5133
+          ],
+          "false_block_rate": 0.1089,
+          "false_block_95ci": [
+            0.0619,
+            0.1846
+          ],
+          "flag_rate": 0.4752,
+          "flag_95ci": [
+            0.3806,
+            0.5717
+          ]
+        },
+        "c2_standalone": {
+          "allow": 100,
+          "flag": 0,
+          "block": 1,
+          "pass_through_rate": 0.9901,
+          "pass_through_95ci": [
+            0.946,
+            0.9983
+          ],
+          "false_block_rate": 0.0099,
+          "false_block_95ci": [
+            0.0017,
+            0.054
+          ],
+          "flag_rate": 0.0,
+          "flag_95ci": [
+            0.0,
+            0.0366
+          ]
+        }
+      }
+    },
+    "notinject_three": {
+      "sample_size": 107,
+      "arms": {
+        "arm_r": {
+          "allow": 26,
+          "flag": 51,
+          "block": 30,
+          "pass_through_rate": 0.243,
+          "pass_through_95ci": [
+            0.1716,
+            0.3322
+          ],
+          "false_block_rate": 0.2804,
+          "false_block_95ci": [
+            0.204,
+            0.372
+          ],
+          "flag_rate": 0.4766,
+          "flag_95ci": [
+            0.3845,
+            0.5704
+          ]
+        },
+        "arm_a": {
+          "allow": 27,
+          "flag": 0,
+          "block": 80,
+          "pass_through_rate": 0.2523,
+          "pass_through_95ci": [
+            0.1796,
+            0.3422
+          ],
+          "false_block_rate": 0.7477,
+          "false_block_95ci": [
+            0.6578,
+            0.8204
+          ],
+          "flag_rate": 0.0,
+          "flag_95ci": [
+            0.0,
+            0.0347
+          ]
+        },
+        "arm_b": {
+          "allow": 26,
+          "flag": 66,
+          "block": 15,
+          "pass_through_rate": 0.243,
+          "pass_through_95ci": [
+            0.1716,
+            0.3322
+          ],
+          "false_block_rate": 0.1402,
+          "false_block_95ci": [
+            0.0868,
+            0.2185
+          ],
+          "flag_rate": 0.6168,
+          "flag_95ci": [
+            0.5222,
+            0.7034
+          ]
+        },
+        "arm_u": {
+          "allow": 26,
+          "flag": 66,
+          "block": 15,
+          "pass_through_rate": 0.243,
+          "pass_through_95ci": [
+            0.1716,
+            0.3322
+          ],
+          "false_block_rate": 0.1402,
+          "false_block_95ci": [
+            0.0868,
+            0.2185
+          ],
+          "flag_rate": 0.6168,
+          "flag_95ci": [
+            0.5222,
+            0.7034
+          ]
+        },
+        "c2_standalone": {
+          "allow": 100,
+          "flag": 0,
+          "block": 7,
+          "pass_through_rate": 0.9346,
+          "pass_through_95ci": [
+            0.8711,
+            0.968
+          ],
+          "false_block_rate": 0.0654,
+          "false_block_95ci": [
+            0.032,
+            0.1289
+          ],
+          "flag_rate": 0.0,
+          "flag_95ci": [
+            0.0,
+            0.0347
+          ]
+        }
+      }
+    }
+  }
+}

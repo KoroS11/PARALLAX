@@ -1,0 +1,63 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+.venv*/
+
+# Caches and coverage
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.lock.lock
+.gpu.lock
+
+# Heavy model weights and checkpoints
+models/
+*.pt
+*.bin
+*.onnx
+*.safetensors
+*.gguf
+checkpoint-*/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Reports generated plots except curated ones
+reports/*.png
+!reports/curated_*.png
+
+# SQLite / Database artifacts
+*.db
+*.sqlite
+*.sqlite3
+
+# Large dataset raw downloads and cache
+data/cache/
+data/raw/
+
+# External eval raw text files (Dolly redistribution: IDs and hashes only committed)
+data/external/dolly_text.jsonl
+export/closeout/external_input_interleaved.jsonl
+export/closeout/external_predictions.jsonl
+
+# Eval cache and large logs (commit samples and manifest only)
+eval/cache/
+eval/logs/**/*.jsonl
+eval/logs/*.jsonl
+!eval/logs/sample_*.jsonl
+!eval/logs/MANIFEST.json
+
+# Submission archives
+*.zip
+

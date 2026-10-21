@@ -1,0 +1,10 @@
+Milestone Event,Timestamp,Provenance Details
+1. Protocol-Lock Commit,2026-10-19 19:02 IST,Commit 7e98c39 committed before run
+2. Final-v4 Run Start,2026-10-19 19:50 IST,Initiated under scripts/gpu_lock.py
+3. Predictions Closed,2026-10-19 20:37:16 IST,347 rows written to predictions.jsonl
+4. Manifest Created,2026-10-19 20:37:38 IST,Manifest committed under eval/logs/
+5. Code Producing Commit,2026-10-19 21:30 IST,Commit 959a99a committed to main
+6. External Dataset Freeze,2026-10-20 23:45 IST,FROZEN_EXTERNAL.sha256 created
+7. K13_SCORE Authorisation,2026-10-21 02:01 IST,docs/K13_SCORE.txt committed (commit 334ffa0)
+8. Overnight Scoring Start,2026-10-21 02:08 IST,Single pass eval_external.py under gpu_lock
+9. Overnight Scoring End,2026-10-21 02:55 IST,621 rows written to external_predictions.jsonl

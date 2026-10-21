@@ -1,0 +1,19 @@
+# PARALLAX Arm C3b: hlyn-labs Prompt Injection Judge 3B (Q4_K_M)
+# Tuned for full 100% GPU offload on 4GB VRAM host (RTX 3050 Laptop GPU):
+# Model size: 2.01 GB GGUF, 2.4 GB loaded VRAM footprint.
+# System RAM footprint: 0.0 GB offload required (zero swapping).
+
+FROM C:/Users/harsh/.cache/huggingface/hub/models--hlyn-labs--prompt-injection-judge-3b/snapshots/50b67595c4c71ad50f84405037c3ed8c3281217a/judge-q4_k_m.gguf
+
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ if .Prompt }}<|im_start|>user
+{{ .Prompt }}<|im_end|>
+{{ end }}<|im_start|>assistant
+"""
+
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
+PARAMETER temperature 0.0
+PARAMETER num_ctx 1024
+PARAMETER num_predict 128

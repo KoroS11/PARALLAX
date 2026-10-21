@@ -1,0 +1,17 @@
+{
+  "figure_id": "arch_arms",
+  "script": "scripts/eval/make_ieee_figures.py",
+  "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+  "source_files": [
+    "scripts/eval/replay_policy.py"
+  ],
+  "source_sha256": {
+    "scripts/eval/replay_policy.py": "35c63338e5e3e23e863d5b32a0dae510f7ec403d847c490714a419d2f7c2ab26"
+  },
+  "assertions": [
+    "7 arms defined",
+    "8 components mapped"
+  ],
+  "pdf_sha256": "49714928f69222f0c415d1f10da64cca1437114a11b900db60bdce261c727556",
+  "png_sha256": "ee744da345ddb30560d3e0fbdd1bd70af8cadd25b2d5680d719996f5401441e3"
+}

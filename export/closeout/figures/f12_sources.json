@@ -1,0 +1,15 @@
+{
+  "title": "Confusion Matrices for Arm R and Arm A on held_out_v4",
+  "split": "held_out_v4",
+  "n": 347,
+  "source_files": [
+    "results/final-v4/predictions.jsonl"
+  ],
+  "source_sha256": [
+    "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+  ],
+  "assertions": [
+    "Arm R atk allow==22, flag==36, block==81",
+    "Arm A atk allow==37, flag==0, block==102"
+  ]
+}

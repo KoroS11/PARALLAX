@@ -1,0 +1,8 @@
+﻿Reviewed by: KoroS11, 2026-10-21
+Base commit reviewed: 6d66e5e2199accf689fe981c830a3aacb9268dbf
+Authorizes: ONE scoring pass on the frozen external sets, only if Preflight 3
+passes every automated check in the overnight prompt, and only if the commit
+used for scoring differs from the base commit solely in docs/, scripts/eval/,
+tests/ and export/. No retries, tuning, code changes or dataset changes.
+external_metrics.py (hash in the protocol) is the only metrics script used.
+PromptForest: included only if matched to final-v4; otherwise excluded.

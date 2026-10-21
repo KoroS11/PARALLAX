@@ -1,0 +1,4 @@
+# PromptForest configuration: vijil disabled to prevent 404 / phantom zero vote
+models:
+  - name: vijil
+    enabled: false

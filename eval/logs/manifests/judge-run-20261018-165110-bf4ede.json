@@ -1,0 +1,26 @@
+{
+  "run_id": "judge-run-20261018-165110-bf4ede",
+  "generated_at": "2026-10-19T05:53:20.136028+00:00",
+  "files": [
+    {
+      "filename": "judge_qwen3_8b.jsonl",
+      "rel_path": "judge-run-20261018-165110-bf4ede\\judge_qwen3_8b.jsonl",
+      "size_bytes": 38155,
+      "sha256": "74e8673ebf3ea09993c1ab491abf07a99f6ce54599d3f40ce6b8c9a8c9c0464b",
+      "num_records": 30,
+      "split_counts": {
+        "dev": 15,
+        "val": 15
+      }
+    }
+  ],
+  "total_records": 30,
+  "split_counts": {
+    "dev": 15,
+    "val": 15
+  },
+  "model_digests": {
+    "qwen3:8b": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41"
+  },
+  "template_hashes": {}
+}

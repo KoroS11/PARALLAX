@@ -1,0 +1,14 @@
+{
+  "run_id": "adaptive-fc3d9f73",
+  "created_at": "2026-10-19T15:43:44.501511+00:00",
+  "eval_type": "adaptive_attack_benchmark",
+  "attacker": "PyRIT 1.1.0 Multi-Probe",
+  "victim_model": "gemma3:4b",
+  "campaign_count": 15,
+  "benign_task_count": 80,
+  "total_trials": 258,
+  "files": {
+    "trials_log": "eval\\logs\\adaptive\\adaptive-fc3d9f73\\trials.jsonl",
+    "results_json": "eval\\adaptive\\adaptive_attack_results.json"
+  }
+}

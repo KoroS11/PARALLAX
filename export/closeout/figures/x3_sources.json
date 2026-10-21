@@ -1,0 +1,18 @@
+{
+  "title": "NotInject Subsets and Multilingual Analysis",
+  "split": "external: NotInject",
+  "n": 309,
+  "source_files": [
+    "export/closeout/external_predictions.jsonl",
+    "data/external/notinject.jsonl"
+  ],
+  "source_sha256": [
+    "28a06dd87952fe2551fa65a05e3188fa9afb3919afeebde96a5edbe0e1d2c461",
+    "a7c2e8460c3885ddf22df4306031b9f1e9829e8f12dfc6f1688fdbab93542366"
+  ],
+  "assertions": [
+    "English n == 225",
+    "Multilingual n == 84",
+    "Left panel reads from notinject_addendum_metrics.json"
+  ]
+}

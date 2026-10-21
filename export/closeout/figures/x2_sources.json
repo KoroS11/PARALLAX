@@ -1,0 +1,16 @@
+{
+  "title": "Decision Composition on External Benign Sets",
+  "split": "external: NotInject (n=309) & Dolly (n=200)",
+  "n": 509,
+  "source_files": [
+    "export/closeout/external_predictions.jsonl"
+  ],
+  "source_sha256": [
+    "28a06dd87952fe2551fa65a05e3188fa9afb3919afeebde96a5edbe0e1d2c461"
+  ],
+  "assertions": [
+    "NotInject n == 309",
+    "Dolly n == 200",
+    "Never pooled == True"
+  ]
+}

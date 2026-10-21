@@ -1,0 +1,46 @@
+{
+  "run_id": "judge-run-20261018-160726-0b9cd7",
+  "generated_at": "2026-10-19T05:53:20.057087+00:00",
+  "files": [
+    {
+      "filename": "judge_gemma3_4b.jsonl",
+      "rel_path": "judge-run-20261018-160726-0b9cd7\\judge_gemma3_4b.jsonl",
+      "size_bytes": 7429,
+      "sha256": "42ceac398655aa26edd673ecc8b1950965fbda3b620562a2ed551c48e50063e8",
+      "num_records": 5,
+      "split_counts": {
+        "dev": 5
+      }
+    },
+    {
+      "filename": "judge_hlyn-labs-3b_latest.jsonl",
+      "rel_path": "judge-run-20261018-160726-0b9cd7\\judge_hlyn-labs-3b_latest.jsonl",
+      "size_bytes": 6524,
+      "sha256": "b74e5c6dae16fa75d75c29439e22ba680ef0a6b5e2635bbed166f4fc16a17026",
+      "num_records": 5,
+      "split_counts": {
+        "dev": 5
+      }
+    },
+    {
+      "filename": "judge_qwen3_8b.jsonl",
+      "rel_path": "judge-run-20261018-160726-0b9cd7\\judge_qwen3_8b.jsonl",
+      "size_bytes": 6490,
+      "sha256": "a181c9337af049d33e753715115fccc52e468a96b1e8e9bc4c94af6bd174f4b4",
+      "num_records": 5,
+      "split_counts": {
+        "dev": 5
+      }
+    }
+  ],
+  "total_records": 15,
+  "split_counts": {
+    "dev": 15
+  },
+  "model_digests": {
+    "gemma3:4b": "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a",
+    "hlyn-labs-3b:latest": "d90b3206ce655d9415afd336bfde27cd344ba539ed12e6b393578091cb539e64",
+    "qwen3:8b": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41"
+  },
+  "template_hashes": {}
+}

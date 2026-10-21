@@ -1,0 +1,20 @@
+{
+  "title": "Data Composition Across Splits and External Sets",
+  "split": "dev / val / held_out_v4 / external",
+  "n": 1542,
+  "source_files": [
+    "numbers.json",
+    "data/splits/dev.jsonl",
+    "data/splits/val.jsonl",
+    "results/final-v4/predictions.jsonl"
+  ],
+  "source_sha256": [
+    "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57",
+    "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+  ],
+  "assertions": [
+    "dev=297",
+    "val=277",
+    "held_out_v4=347"
+  ]
+}

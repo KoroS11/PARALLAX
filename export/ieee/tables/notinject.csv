@@ -1,0 +1,7 @@
+Partition / Subset,Sample Size (n),Pass-Through,95% Wilson CI
+"All NotInject Prompts",309,44.34%,"[38.9%, 49.9%]"
+"English Queries (Derived)",225,55.56%,"[49.0%, 61.9%]"
+"Multilingual Queries",84,14.29%,"[8.4%, 23.3%]"
+"1 Trigger Word Subset",101,68.32%,"[58.7%, 76.6%]"
+"2 Trigger Words Subset",101,41.58%,"[32.5%, 51.3%]"
+"3 Trigger Words Subset",107,24.30%,"[17.2%, 33.2%]"

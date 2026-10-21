@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-10-19T13:23:24.413365+00:00",
+  "dev_samples": 297,
+  "val_samples": 277,
+  "features": [
+    "d2",
+    "d3",
+    "d4",
+    "discrepancy",
+    "confidence",
+    "enc_present",
+    "len"
+  ],
+  "prob_error_auc_val": 0.7018,
+  "selected_tau": 0.35,
+  "val_routing_rate": 58.12,
+  "policy_b": {
+    "total_downgrades": 3,
+    "attack_downgrades": 0,
+    "invariant_respected": true
+  },
+  "arms": {
+    "arm_a": {
+      "recall": 0.7982,
+      "recall_wilson": [
+        0.7133,
+        0.8628
+      ],
+      "fpr": 0.2917,
+      "fbr": 0.0179,
+      "fbr_wilson": [
+        0.0061,
+        0.0512
+      ]
+    },
+    "arm_r": {
+      "recall": 0.9266,
+      "recall_wilson": [
+        0.8618,
+        0.9623
+      ],
+      "fpr": 0.2917,
+      "fbr": 0.0,
+      "fbr_wilson": [
+        0.0,
+        0.0224
+      ]
+    }
+  }
+}

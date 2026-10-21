@@ -1,0 +1,72 @@
+% PARALLAX IEEE Tables
+\begin{table*}[t]
+\centering
+\caption{Performance Comparison Across Defense Arms on held\_out\_v4 ($N=347$: 139 Attacks, 208 Benign)}
+\label{tab:held_out_arms}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Defense Arm} & \textbf{Loose Recall (\%)} & \textbf{95\% Wilson CI} & \textbf{Strict Recall (\%)} & \textbf{Pass-Through (\%)} & \textbf{Benign FLAG (\%)} & \textbf{Benign BLOCK (\%)} & \textbf{Calls/100} \\
+\midrule
+Arm R (Primary) & 84.17 & [77.2, 89.3] & 58.27 & 68.75 & 25.00 & 6.25 & 72.33 \\
+Arm A (Post-hoc) & 73.38 & [65.5, 80.0] & 73.38 & 68.75 & 0.00 & 31.25 & 0.00 \\
+Arm B (Post-hoc) & 89.93 & [83.8, 93.9] & 52.52 & 68.75 & 30.77 & 0.48 & 94.52 \\
+Arm U (Post-hoc) & 92.81 & [87.3, 96.0] & 52.52 & 68.75 & 30.77 & 0.48 & 100.00 \\
+Arm C2 (Post-hoc) & 74.10 & [66.2, 80.7] & 66.91 & 100.00 & 0.00 & 0.00 & 100.00 \\
+PG2 (Post-hoc) & 32.37 & [25.2, 40.5] & 32.37 & 91.83 & 0.00 & 8.17 & 0.00 \\
+PromptForest (Post-hoc) & 4.32 & [2.0, 9.1] & 4.32 & 100.00 & 0.00 & 0.00 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table}[t]
+\centering
+\caption{External Benchmark Evaluation on Lakera/Gandalf ($n=112$ Attacks)}
+\label{tab:gandalf}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{System / Model} & \textbf{Loose Recall (\%)} & \textbf{95\% CI} & \textbf{Strict Recall (\%)} & \textbf{95\% CI} \\
+\midrule
+Arm R (Primary) & 100.00 & [96.7, 100.0] & 83.04 & [75.0, 88.9] \\
+Arm A & 100.00 & [96.7, 100.0] & 100.00 & [96.7, 100.0] \\
+Arm C2 & 83.93 & [76.0, 89.6] & 83.04 & [75.0, 88.9] \\
+D2 (DeBERTa-v3) & 100.00 & [96.7, 100.0] & 100.00 & [96.7, 100.0] \\
+D3 (Deepset) & 68.75 & [59.7, 76.6] & 68.75 & [59.7, 76.6] \\
+D4 (Rules) & 26.79 & [19.5, 35.7] & 26.79 & [19.5, 35.7] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{NotInject Benign Trigger-Word Evaluation ($n=309$ Benign)}
+\label{tab:notinject}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Partition / Subset} & \textbf{Sample Size ($n$)} & \textbf{Pass-Through (\%)} & \textbf{95\% Wilson CI} \\
+\midrule
+All NotInject Prompts & 309 & 44.34 & [38.9, 49.9] \\
+English Queries (Derived) & 225 & 55.56 & [49.0, 61.9] \\
+Multilingual Queries & 84 & 14.29 & [8.4, 23.3] \\
+1 Trigger Word Subset & 101 & 68.32 & [58.7, 76.6] \\
+2 Trigger Words Subset & 101 & 41.58 & [32.5, 51.3] \\
+3 Trigger Words Subset & 107 & 24.30 & [17.2, 33.2] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Databricks Dolly-15k Instruction Benign Evaluation ($n=200$ Benign)}
+\label{tab:dolly}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Defense Arm} & \textbf{Pass-Through (\%)} & \textbf{95\% Wilson CI} & \textbf{Friction (\%)} & \textbf{Calls/100} \\
+\midrule
+Arm R (Primary) & 96.00 & [92.3, 98.0] & 4.00 & 79.00 \\
+Arm A & 96.00 & [92.3, 98.0] & 4.00 & 0.00 \\
+Arm B & 96.00 & [92.3, 98.0] & 4.00 & 81.00 \\
+Arm U & 96.00 & [92.3, 98.0] & 4.00 & 100.00 \\
+Arm C2 & 100.00 & [98.1, 100.0] & 0.00 & 100.00 \\
+\bottomrule
+\end{tabular}
+\end{table}

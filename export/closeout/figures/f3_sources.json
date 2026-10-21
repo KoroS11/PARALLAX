@@ -1,0 +1,17 @@
+{
+  "title": "Detector Discrimination (ROC-AUC) Across Splits",
+  "split": "dev / val / held_out_v4",
+  "n": 347,
+  "source_files": [
+    "scripts/eval/detector_auc_table.py",
+    "results/final-v4/predictions.jsonl"
+  ],
+  "source_sha256": [
+    "a60bdf88cc6986432c3a12af3deba9b01e768ddffcd3288cf3b655181ef83766",
+    "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+  ],
+  "assertions": [
+    "D3 val AUC == 0.8452",
+    "D3 held_out AUC == 0.7761"
+  ]
+}

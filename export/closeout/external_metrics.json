@@ -1,0 +1,516 @@
+{
+  "summary": {
+    "total_rows": 621,
+    "total_attacks": 112,
+    "total_benign": 509
+  },
+  "calls_per_100": {
+    "arm_r": 76.81159420289855,
+    "arm_a": 0.0,
+    "arm_b": 90.66022544283415,
+    "arm_u": 100.0,
+    "c2_standalone": 100.0
+  },
+  "attacks_overall": {
+    "total_samples": 112,
+    "arms": {
+      "arm_r": {
+        "allow": 0,
+        "flag": 19,
+        "block": 93,
+        "loose_recall": 1.0,
+        "loose_recall_wilson_95ci": [
+          0.9668,
+          1.0
+        ],
+        "strict_recall": 0.8304,
+        "strict_recall_wilson_95ci": [
+          0.7502,
+          0.8886
+        ],
+        "calls_per_100": 71.42857142857143
+      },
+      "arm_a": {
+        "allow": 0,
+        "flag": 0,
+        "block": 112,
+        "loose_recall": 1.0,
+        "loose_recall_wilson_95ci": [
+          0.9668,
+          1.0
+        ],
+        "strict_recall": 1.0,
+        "strict_recall_wilson_95ci": [
+          0.9668,
+          1.0
+        ],
+        "calls_per_100": 0.0
+      },
+      "arm_b": {
+        "allow": 0,
+        "flag": 19,
+        "block": 93,
+        "loose_recall": 1.0,
+        "loose_recall_wilson_95ci": [
+          0.9668,
+          1.0
+        ],
+        "strict_recall": 0.8304,
+        "strict_recall_wilson_95ci": [
+          0.7502,
+          0.8886
+        ],
+        "calls_per_100": 91.07142857142857
+      },
+      "arm_u": {
+        "allow": 0,
+        "flag": 19,
+        "block": 93,
+        "loose_recall": 1.0,
+        "loose_recall_wilson_95ci": [
+          0.9668,
+          1.0
+        ],
+        "strict_recall": 0.8304,
+        "strict_recall_wilson_95ci": [
+          0.7502,
+          0.8886
+        ],
+        "calls_per_100": 100.0
+      },
+      "c2_standalone": {
+        "allow": 18,
+        "flag": 1,
+        "block": 93,
+        "loose_recall": 0.8393,
+        "loose_recall_wilson_95ci": [
+          0.7602,
+          0.8959
+        ],
+        "strict_recall": 0.8304,
+        "strict_recall_wilson_95ci": [
+          0.7502,
+          0.8886
+        ],
+        "calls_per_100": 100.0
+      }
+    }
+  },
+  "benign_overall": {
+    "total_samples": 509,
+    "arms": {
+      "arm_r": {
+        "allow": 329,
+        "flag": 117,
+        "block": 63,
+        "pass_through_rate": 0.6464,
+        "pass_through_wilson_95ci": [
+          0.6039,
+          0.6867
+        ],
+        "flag_rate": 0.2299,
+        "flag_rate_wilson_95ci": [
+          0.1954,
+          0.2684
+        ],
+        "false_block_rate": 0.1238,
+        "false_block_rate_wilson_95ci": [
+          0.0979,
+          0.1552
+        ],
+        "calls_per_100": 77.99607072691552
+      },
+      "arm_a": {
+        "allow": 331,
+        "flag": 0,
+        "block": 178,
+        "pass_through_rate": 0.6503,
+        "pass_through_wilson_95ci": [
+          0.6079,
+          0.6905
+        ],
+        "flag_rate": 0.0,
+        "flag_rate_wilson_95ci": [
+          0.0,
+          0.0075
+        ],
+        "false_block_rate": 0.3497,
+        "false_block_rate_wilson_95ci": [
+          0.3095,
+          0.3921
+        ],
+        "calls_per_100": 0.0
+      },
+      "arm_b": {
+        "allow": 329,
+        "flag": 151,
+        "block": 29,
+        "pass_through_rate": 0.6464,
+        "pass_through_wilson_95ci": [
+          0.6039,
+          0.6867
+        ],
+        "flag_rate": 0.2967,
+        "flag_rate_wilson_95ci": [
+          0.2586,
+          0.3377
+        ],
+        "false_block_rate": 0.057,
+        "false_block_rate_wilson_95ci": [
+          0.04,
+          0.0806
+        ],
+        "calls_per_100": 90.56974459724951
+      },
+      "arm_u": {
+        "allow": 329,
+        "flag": 151,
+        "block": 29,
+        "pass_through_rate": 0.6464,
+        "pass_through_wilson_95ci": [
+          0.6039,
+          0.6867
+        ],
+        "flag_rate": 0.2967,
+        "flag_rate_wilson_95ci": [
+          0.2586,
+          0.3377
+        ],
+        "false_block_rate": 0.057,
+        "false_block_rate_wilson_95ci": [
+          0.04,
+          0.0806
+        ],
+        "calls_per_100": 100.0
+      },
+      "c2_standalone": {
+        "allow": 499,
+        "flag": 0,
+        "block": 10,
+        "pass_through_rate": 0.9804,
+        "pass_through_wilson_95ci": [
+          0.9642,
+          0.9893
+        ],
+        "flag_rate": 0.0,
+        "flag_rate_wilson_95ci": [
+          0.0,
+          0.0075
+        ],
+        "false_block_rate": 0.0196,
+        "false_block_rate_wilson_95ci": [
+          0.0107,
+          0.0358
+        ],
+        "calls_per_100": 100.0
+      }
+    }
+  },
+  "subsets": {
+    "source_dolly": {
+      "total_samples": 200,
+      "arms": {
+        "arm_r": {
+          "allow": 192,
+          "flag": 7,
+          "block": 1,
+          "pass_through_rate": 0.96,
+          "pass_through_wilson_95ci": [
+            0.9231,
+            0.9796
+          ],
+          "flag_rate": 0.035,
+          "flag_rate_wilson_95ci": [
+            0.0171,
+            0.0705
+          ],
+          "false_block_rate": 0.005,
+          "false_block_rate_wilson_95ci": [
+            0.0009,
+            0.0278
+          ],
+          "calls_per_100": 79.0
+        },
+        "arm_a": {
+          "allow": 192,
+          "flag": 0,
+          "block": 8,
+          "pass_through_rate": 0.96,
+          "pass_through_wilson_95ci": [
+            0.9231,
+            0.9796
+          ],
+          "flag_rate": 0.0,
+          "flag_rate_wilson_95ci": [
+            0.0,
+            0.0188
+          ],
+          "false_block_rate": 0.04,
+          "false_block_rate_wilson_95ci": [
+            0.0204,
+            0.0769
+          ],
+          "calls_per_100": 0.0
+        },
+        "arm_b": {
+          "allow": 192,
+          "flag": 8,
+          "block": 0,
+          "pass_through_rate": 0.96,
+          "pass_through_wilson_95ci": [
+            0.9231,
+            0.9796
+          ],
+          "flag_rate": 0.04,
+          "flag_rate_wilson_95ci": [
+            0.0204,
+            0.0769
+          ],
+          "false_block_rate": 0.0,
+          "false_block_rate_wilson_95ci": [
+            0.0,
+            0.0188
+          ],
+          "calls_per_100": 81.0
+        },
+        "arm_u": {
+          "allow": 192,
+          "flag": 8,
+          "block": 0,
+          "pass_through_rate": 0.96,
+          "pass_through_wilson_95ci": [
+            0.9231,
+            0.9796
+          ],
+          "flag_rate": 0.04,
+          "flag_rate_wilson_95ci": [
+            0.0204,
+            0.0769
+          ],
+          "false_block_rate": 0.0,
+          "false_block_rate_wilson_95ci": [
+            0.0,
+            0.0188
+          ],
+          "calls_per_100": 100.0
+        },
+        "c2_standalone": {
+          "allow": 200,
+          "flag": 0,
+          "block": 0,
+          "pass_through_rate": 1.0,
+          "pass_through_wilson_95ci": [
+            0.9812,
+            1.0
+          ],
+          "flag_rate": 0.0,
+          "flag_rate_wilson_95ci": [
+            0.0,
+            0.0188
+          ],
+          "false_block_rate": 0.0,
+          "false_block_rate_wilson_95ci": [
+            0.0,
+            0.0188
+          ],
+          "calls_per_100": 100.0
+        }
+      }
+    },
+    "source_gandalf": {
+      "total_samples": 112,
+      "arms": {
+        "arm_r": {
+          "allow": 0,
+          "flag": 19,
+          "block": 93,
+          "loose_recall": 1.0,
+          "loose_recall_wilson_95ci": [
+            0.9668,
+            1.0
+          ],
+          "strict_recall": 0.8304,
+          "strict_recall_wilson_95ci": [
+            0.7502,
+            0.8886
+          ],
+          "calls_per_100": 71.42857142857143
+        },
+        "arm_a": {
+          "allow": 0,
+          "flag": 0,
+          "block": 112,
+          "loose_recall": 1.0,
+          "loose_recall_wilson_95ci": [
+            0.9668,
+            1.0
+          ],
+          "strict_recall": 1.0,
+          "strict_recall_wilson_95ci": [
+            0.9668,
+            1.0
+          ],
+          "calls_per_100": 0.0
+        },
+        "arm_b": {
+          "allow": 0,
+          "flag": 19,
+          "block": 93,
+          "loose_recall": 1.0,
+          "loose_recall_wilson_95ci": [
+            0.9668,
+            1.0
+          ],
+          "strict_recall": 0.8304,
+          "strict_recall_wilson_95ci": [
+            0.7502,
+            0.8886
+          ],
+          "calls_per_100": 91.07142857142857
+        },
+        "arm_u": {
+          "allow": 0,
+          "flag": 19,
+          "block": 93,
+          "loose_recall": 1.0,
+          "loose_recall_wilson_95ci": [
+            0.9668,
+            1.0
+          ],
+          "strict_recall": 0.8304,
+          "strict_recall_wilson_95ci": [
+            0.7502,
+            0.8886
+          ],
+          "calls_per_100": 100.0
+        },
+        "c2_standalone": {
+          "allow": 18,
+          "flag": 1,
+          "block": 93,
+          "loose_recall": 0.8393,
+          "loose_recall_wilson_95ci": [
+            0.7602,
+            0.8959
+          ],
+          "strict_recall": 0.8304,
+          "strict_recall_wilson_95ci": [
+            0.7502,
+            0.8886
+          ],
+          "calls_per_100": 100.0
+        }
+      }
+    },
+    "source_notinject": {
+      "total_samples": 309,
+      "arms": {
+        "arm_r": {
+          "allow": 137,
+          "flag": 110,
+          "block": 62,
+          "pass_through_rate": 0.4434,
+          "pass_through_wilson_95ci": [
+            0.389,
+            0.4991
+          ],
+          "flag_rate": 0.356,
+          "flag_rate_wilson_95ci": [
+            0.3047,
+            0.4108
+          ],
+          "false_block_rate": 0.2006,
+          "false_block_rate_wilson_95ci": [
+            0.1598,
+            0.2489
+          ],
+          "calls_per_100": 77.34627831715211
+        },
+        "arm_a": {
+          "allow": 139,
+          "flag": 0,
+          "block": 170,
+          "pass_through_rate": 0.4498,
+          "pass_through_wilson_95ci": [
+            0.3953,
+            0.5056
+          ],
+          "flag_rate": 0.0,
+          "flag_rate_wilson_95ci": [
+            0.0,
+            0.0123
+          ],
+          "false_block_rate": 0.5502,
+          "false_block_rate_wilson_95ci": [
+            0.4944,
+            0.6047
+          ],
+          "calls_per_100": 0.0
+        },
+        "arm_b": {
+          "allow": 137,
+          "flag": 143,
+          "block": 29,
+          "pass_through_rate": 0.4434,
+          "pass_through_wilson_95ci": [
+            0.389,
+            0.4991
+          ],
+          "flag_rate": 0.4628,
+          "flag_rate_wilson_95ci": [
+            0.408,
+            0.5185
+          ],
+          "false_block_rate": 0.0939,
+          "false_block_rate_wilson_95ci": [
+            0.0661,
+            0.1315
+          ],
+          "calls_per_100": 96.76375404530745
+        },
+        "arm_u": {
+          "allow": 137,
+          "flag": 143,
+          "block": 29,
+          "pass_through_rate": 0.4434,
+          "pass_through_wilson_95ci": [
+            0.389,
+            0.4991
+          ],
+          "flag_rate": 0.4628,
+          "flag_rate_wilson_95ci": [
+            0.408,
+            0.5185
+          ],
+          "false_block_rate": 0.0939,
+          "false_block_rate_wilson_95ci": [
+            0.0661,
+            0.1315
+          ],
+          "calls_per_100": 100.0
+        },
+        "c2_standalone": {
+          "allow": 299,
+          "flag": 0,
+          "block": 10,
+          "pass_through_rate": 0.9676,
+          "pass_through_wilson_95ci": [
+            0.9415,
+            0.9823
+          ],
+          "flag_rate": 0.0,
+          "flag_rate_wilson_95ci": [
+            0.0,
+            0.0123
+          ],
+          "false_block_rate": 0.0324,
+          "false_block_rate_wilson_95ci": [
+            0.0177,
+            0.0585
+          ],
+          "calls_per_100": 100.0
+        }
+      }
+    }
+  }
+}

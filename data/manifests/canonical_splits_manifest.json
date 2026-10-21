@@ -1,0 +1,53 @@
+{
+  "binary_distributions": {
+    "test": {
+      "attack": 2,
+      "benign": 1
+    },
+    "train": {
+      "attack": 16,
+      "benign": 8
+    },
+    "val": {
+      "attack": 2,
+      "benign": 1
+    }
+  },
+  "class_distributions": {
+    "test": {
+      "keyword_override": 1,
+      "none": 1,
+      "persona_play": 1
+    },
+    "train": {
+      "keyword_override": 8,
+      "none": 8,
+      "persona_play": 8
+    },
+    "val": {
+      "keyword_override": 1,
+      "none": 1,
+      "persona_play": 1
+    }
+  },
+  "dedup_policy": {
+    "method": "MinHash LSH + 5-gram Jaccard",
+    "normalization": "NFKC",
+    "precedence": "test > val > train",
+    "threshold": 0.8
+  },
+  "manifest_version": "1.0",
+  "overall_sha256": "4b6df093156cfebae76e06b9b78e3c3b01830616dd4d95b54284ffc8b5da8764",
+  "sample_counts": {
+    "test": 3,
+    "train": 24,
+    "val": 3
+  },
+  "seed": 42,
+  "split_sha256": {
+    "test": "311e4bf6404780517865cbb68593a89045df6f788ae57ea257ef51fa2ce577d6",
+    "train": "6eb7580b2ae4c15ffad0efecf5a623f9547d699fb4a53234a946df4f285d6880",
+    "val": "281f621743d8383cf82d3dfae9741e57a415779c61e400bf12999c017d29ba42"
+  },
+  "total_samples": 30
+}

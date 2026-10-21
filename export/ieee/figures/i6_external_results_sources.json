@@ -1,0 +1,20 @@
+{
+  "figure_id": "i6_external_results",
+  "script": "scripts/eval/make_ieee_figures.py",
+  "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+  "source_files": [
+    "export/closeout/external_predictions.jsonl",
+    "export/closeout/notinject_addendum_metrics.json"
+  ],
+  "source_sha256": {
+    "export/closeout/external_predictions.jsonl": "28a06dd87952fe2551fa65a05e3188fa9afb3919afeebde96a5edbe0e1d2c461",
+    "export/closeout/notinject_addendum_metrics.json": "a7c2e8460c3885ddf22df4306031b9f1e9829e8f12dfc6f1688fdbab93542366"
+  },
+  "assertions": [
+    "Gandalf n == 112",
+    "NotInject n == 309",
+    "Dolly n == 200"
+  ],
+  "pdf_sha256": "28aea6d2c0e5ab8cca167e313f892c92ab52bf7a2b13777b7bb9a2d6d5354d7b",
+  "png_sha256": "37ae04bc9fbb293fb2ccd221f53b4c50a5fce63be2aa6617b1af61205e7c2c5d"
+}

@@ -1,0 +1,6 @@
+Detector,dev AUC (N=297),val AUC (N=277),held_out_v4 AUC (N=347),held_out 95% Bootstrap CI
+D2 DeBERTa-v3,0.7480,0.7500,0.7812,"[0.7303, 0.8286]"
+D3 Deepset,0.8350,0.8452,0.7761,"[0.7246, 0.8248]"
+D4 Regex Rules,0.5401,0.5398,0.5288,"[0.4962, 0.5615]"
+Prompt Guard 2,0.8290,0.8294,0.8090,"[0.7600, 0.8532]"
+PromptForest,not evaluated,not evaluated,0.5186,"[0.4578, 0.5794]"

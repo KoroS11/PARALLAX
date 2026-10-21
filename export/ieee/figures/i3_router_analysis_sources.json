@@ -1,0 +1,20 @@
+{
+  "figure_id": "i3_router_analysis",
+  "script": "scripts/eval/make_ieee_figures.py",
+  "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+  "source_files": [
+    "numbers.json",
+    "results/final-v4/predictions.jsonl"
+  ],
+  "source_sha256": {
+    "numbers.json": "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57",
+    "results/final-v4/predictions.jsonl": "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+  },
+  "assertions": [
+    "Router AUC == 0.5296",
+    "Arm R percentile recall == 4.5%",
+    "Simulation: random routing k=251, 2000 draws, seed 0"
+  ],
+  "pdf_sha256": "416764cf2d6fd5ea36ffef5c451c9d7b25d08a2d8fbfb1c2b166cded65c8d138",
+  "png_sha256": "452da7c80e708356aae91dbd3617451f9646d6f21f8dbcfbee0fb9cb6495c5ea"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "final-v4-20261019-142005-8fb16e",
+  "created_at": "2026-10-19T15:07:38.124050+00:00",
+  "eval_type": "held_out_final_one_shot",
+  "split_name": "held_out_v4",
+  "split_sha256": "9325e6185ac6a8c038b8129de91fe3dd8852f30ebecf4a667b24f4e973217dd5",
+  "sample_count": 347,
+  "attack_count": 139,
+  "benign_count": 208,
+  "model_digest": "gemma3:4b",
+  "primary_arm": "Arm R (Policy B, tau=0.35)",
+  "files": {
+    "predictions_log": "C:\\Users\\harsh\\Downloads\\PARALLAX\\eval\\logs\\final-v4-20261019-142005-8fb16e\\predictions.jsonl",
+    "results_json": "C:\\Users\\harsh\\Downloads\\PARALLAX\\eval\\final\\eval_final_results.json"
+  }
+}

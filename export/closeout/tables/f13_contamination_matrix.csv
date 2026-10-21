@@ -1,0 +1,37 @@
+Detector Component,External Candidate Dataset,Contamination Status
+d2-deberta (ProtectAI),XSTest,documented overlap
+d2-deberta (ProtectAI),TruthfulQA,not documented in the card
+d2-deberta (ProtectAI),deepset,not documented in the card
+d2-deberta (ProtectAI),Gandalf,not documented in the card
+d2-deberta (ProtectAI),NotInject,not documented in the card
+d2-deberta (ProtectAI),Dolly,not documented in the card
+d3-deepset (deepset),XSTest,not documented in the card
+d3-deepset (deepset),TruthfulQA,not documented in the card
+d3-deepset (deepset),deepset,documented overlap
+d3-deepset (deepset),Gandalf,not documented in the card
+d3-deepset (deepset),NotInject,not documented in the card
+d3-deepset (deepset),Dolly,not documented in the card
+d4_rules (Static Regex),XSTest,no model card (rule-based)
+d4_rules (Static Regex),TruthfulQA,no model card (rule-based)
+d4_rules (Static Regex),deepset,no model card (rule-based)
+d4_rules (Static Regex),Gandalf,no model card (rule-based)
+d4_rules (Static Regex),NotInject,no model card (rule-based)
+d4_rules (Static Regex),Dolly,no model card (rule-based)
+Prompt Guard 2 (86M),XSTest,not documented in the card
+Prompt Guard 2 (86M),TruthfulQA,not documented in the card
+Prompt Guard 2 (86M),deepset,not documented in the card
+Prompt Guard 2 (86M),Gandalf,not documented in the card
+Prompt Guard 2 (86M),NotInject,not documented in the card
+Prompt Guard 2 (86M),Dolly,not documented in the card
+PromptForest (Tree),XSTest,not documented in the card
+PromptForest (Tree),TruthfulQA,not documented in the card
+PromptForest (Tree),deepset,not documented in the card
+PromptForest (Tree),Gandalf,not documented in the card
+PromptForest (Tree),NotInject,not documented in the card
+PromptForest (Tree),Dolly,not documented in the card
+Judge (gemma3:4b),XSTest,not documented in the card
+Judge (gemma3:4b),TruthfulQA,not documented in the card
+Judge (gemma3:4b),deepset,not documented in the card
+Judge (gemma3:4b),Gandalf,not documented in the card
+Judge (gemma3:4b),NotInject,not documented in the card
+Judge (gemma3:4b),Dolly,not documented in the card

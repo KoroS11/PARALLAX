@@ -1,0 +1,21 @@
+{
+  "figure_id": "i2_detector_auc",
+  "script": "scripts/eval/make_ieee_figures.py",
+  "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+  "source_files": [
+    "numbers.json",
+    "scripts/eval/detector_auc_table.py"
+  ],
+  "source_sha256": {
+    "numbers.json": "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57",
+    "scripts/eval/detector_auc_table.py": "a60bdf88cc6986432c3a12af3deba9b01e768ddffcd3288cf3b655181ef83766"
+  },
+  "assertions": [
+    "D2 held-out AUC == 0.7812",
+    "D3 held-out AUC == 0.7763",
+    "y-axis starts at 0.0",
+    "PF dev/val marked n/a"
+  ],
+  "pdf_sha256": "302a845d6d60b974f7a796eb1a17dcc28c73f38c3adf583ba231c2c298b992e5",
+  "png_sha256": "f2e283bc8f00952089d572896778edbc92ef7802136ff93f9172cd194c4be04b"
+}

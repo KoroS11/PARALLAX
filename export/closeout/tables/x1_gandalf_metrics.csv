@@ -1,0 +1,8 @@
+Detector / Arm,Recall (%),95% Wilson CI,Sample Size (n)
+Arm R: Loose (primary),100.00%,"[96.68%, 100.00%]",112
+Arm R: Strict (primary),83.04%,"[75.02%, 88.86%]",112
+Arm A (post-hoc),100.00%,"[96.68%, 100.00%]",112
+Arm C2 (post-hoc),83.93%,"[76.02%, 89.59%]",112
+D2 DeBERTa (post-hoc),100.00%,"[96.68%, 100.00%]",112
+D3 Deepset (post-hoc),68.75%,"[59.66%, 76.59%]",112
+D4 Rules (post-hoc),26.79%,"[19.45%, 35.66%]",112

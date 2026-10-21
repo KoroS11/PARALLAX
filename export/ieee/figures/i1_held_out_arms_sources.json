@@ -1,0 +1,19 @@
+{
+  "figure_id": "i1_held_out_arms",
+  "script": "scripts/eval/make_ieee_figures.py",
+  "git_commit": "c18a346d6c2ea0f3d809d899d4e88d1d927cdc2e",
+  "source_files": [
+    "numbers.json",
+    "results/final-v4/predictions.jsonl"
+  ],
+  "source_sha256": {
+    "numbers.json": "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57",
+    "results/final-v4/predictions.jsonl": "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+  },
+  "assertions": [
+    "Arm R loose recall == 84.17%",
+    "Arm R pass-through == 68.75%"
+  ],
+  "pdf_sha256": "1a0d575dca9f7218bf732d5c3acbe362fdd4a62753f157f1f27a83987d58aa05",
+  "png_sha256": "5eebea5e1459e2cdce8fd5497d3c5803d1acb8fe69e8776f026fc0b2a7733aac"
+}

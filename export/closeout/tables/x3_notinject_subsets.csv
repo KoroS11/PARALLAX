@@ -1,0 +1,6 @@
+Subset / Category,Sample Size (n),Arm R Pass-Through Rate,95% Wilson CI
+English,225,55.56%,"[49.02%, 61.90%]"
+Multilingual,84,14.29%,"[8.37%, 23.33%]"
+Subset 1 (1 word),101,68.32%,"[58.71%, 76.58%]"
+Subset 2 (2 words),101,41.58%,"[32.45%, 51.33%]"
+Subset 3 (3 words),107,24.30%,"[17.16%, 33.22%]"

@@ -1,0 +1,8 @@
+Arm,Loose Recall,Benign FLAG+BLOCK,Judge Calls per 100,Dominance Status
+Arm R (Primary),84.17%,31.25%,72.33,Non-dominated (Pareto-optimal)
+Arm A,73.38%,31.25%,0.00,Non-dominated (Pareto-optimal)
+Arm B,89.93%,31.25%,94.52,Non-dominated (Pareto-optimal)
+Arm U,92.81%,31.25%,100.00,Non-dominated (Pareto-optimal)
+Arm C2,74.10%,0.00%,100.00,Non-dominated (Pareto-optimal)
+PG2,32.37%,8.17%,0.00,Non-dominated (Pareto-optimal)
+PromptForest,4.32%,0.00%,0.00,Non-dominated (Pareto-optimal)

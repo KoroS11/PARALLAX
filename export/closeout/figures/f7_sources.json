@@ -1,0 +1,17 @@
+{
+  "title": "Router Diagnostic Analysis and Random Routing Benchmark",
+  "split": "held_out_v4",
+  "n": 347,
+  "source_files": [
+    "results/final-v4/predictions.jsonl",
+    "numbers.json"
+  ],
+  "source_sha256": [
+    "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444",
+    "18092112f95df2adf95538ff0d03b277a47f302e843c9b76eee9ec8513b7ea57"
+  ],
+  "assertions": [
+    "Router AUC vs Error == 0.5296",
+    "Random routing mean recall == 87.48%"
+  ]
+}

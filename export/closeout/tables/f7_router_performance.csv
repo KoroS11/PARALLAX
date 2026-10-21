@@ -1,0 +1,7 @@
+Metric,Value,Interval / Fraction,Interpretation
+AUC vs Fusion Error,0.5296,"[0.4579, 0.6006]",No demonstrated discrimination vs chance
+AUC vs Ground Truth Label,0.4350,"[0.3703, 0.4991]",Reflects benign routing asymmetry
+Attack Routing Rate,61.87%,82 / 139,tau = 0.35 threshold
+Benign Routing Rate,79.33%,169 / 208,tau = 0.35 threshold
+Overall Routing Rate,72.33%,251 / 347,tau = 0.35 threshold
+Random Routing Recall Mean,87.48%,"[84.17%, 90.65%]",2000 draws at k=251 calls

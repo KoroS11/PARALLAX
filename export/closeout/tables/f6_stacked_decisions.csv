@@ -1,0 +1,15 @@
+Arm,Class,ALLOW,FLAG,BLOCK,Total
+Arm R (primary),Attacks,22,36,81,139
+Arm R (primary),Benign,143,52,13,208
+Arm A (post-hoc),Attacks,37,0,102,139
+Arm A (post-hoc),Benign,143,0,65,208
+Arm B (post-hoc),Attacks,14,52,73,139
+Arm B (post-hoc),Benign,143,64,1,208
+Arm U (post-hoc),Attacks,10,56,73,139
+Arm U (post-hoc),Benign,143,64,1,208
+Arm C2 (post-hoc),Attacks,36,10,93,139
+Arm C2 (post-hoc),Benign,208,0,0,208
+PG2 (post-hoc),Attacks,94,0,45,139
+PG2 (post-hoc),Benign,191,0,17,208
+PF (post-hoc),Attacks,133,0,6,139
+PF (post-hoc),Benign,208,0,0,208

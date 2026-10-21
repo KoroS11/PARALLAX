@@ -1,0 +1,10 @@
+# PARALLAX Release Tree Exclusions
+# The following files are excluded from the published release tree:
+# - External dataset raw prompt texts (redistribution restriction; rebuilt via scripts/external/rebuild_external.md)
+# - Raw external prediction logs containing prompt texts
+# - Temporary test frame artifact
+data/external/gandalf.jsonl
+data/external/notinject.jsonl
+data/external/dolly_text.jsonl
+export/closeout/external_predictions.jsonl
+export/demo/test_frame.png

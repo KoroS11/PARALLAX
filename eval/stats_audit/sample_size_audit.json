@@ -1,0 +1,1028 @@
+{
+  "audit_version": "1.0",
+  "run_id": "audit-a569ee02",
+  "timestamp_utc": "2026-10-18T12:25:01.500785+00:00",
+  "auditor": "sample-size-audit (Wave G Stream 4)",
+  "target_file": "docs/REPORT.md",
+  "rules_conformance": "AGENTS.md",
+  "disclaimer_text": "illustrative only, under-powered",
+  "table_4_1": {
+    "table": "4.1",
+    "title": "Empirical Evaluation Results Matrix (E1 through E7)",
+    "rows": [
+      {
+        "id": "E1",
+        "name": "In-Distribution Multi-Class",
+        "subject": "D1 (MiniLM+LR)",
+        "metric": "ROC-AUC / Precision",
+        "value": "1.0000 / 1.0000",
+        "n": 8,
+        "n_eff": 8,
+        "disclaimer": "illustrative only, under-powered",
+        "significance": "Tested on 8 samples (Macro-F1=0.083)."
+      },
+      {
+        "id": "E2",
+        "name": "OOD Robustness",
+        "subject": "D1 (MiniLM+LR)",
+        "metric": "Evasion Recall",
+        "value": "100.0% (Linguistic)",
+        "n": 4,
+        "n_eff": 4,
+        "disclaimer": "illustrative only, under-powered",
+        "significance": "Tested on 4 external evasion prompts."
+      },
+      {
+        "id": "E3",
+        "name": "Over-Defense FPR",
+        "subject": "D4 (Rules Baseline)",
+        "metric": "False Positive Rate",
+        "value": "0.00%",
+        "n": 4,
+        "n_eff": 4,
+        "disclaimer": "illustrative only, under-powered",
+        "significance": "Tested on 4 benign security engineering prompts."
+      },
+      {
+        "id": "E4",
+        "name": "Fusion Strategy Comparison",
+        "subject": "Any-Flag vs Majority vs Stacker",
+        "metric": "F1 / ROC-AUC",
+        "value": "1.0000 / 1.0000",
+        "n": 8,
+        "n_eff": 8,
+        "disclaimer": "illustrative only, under-powered",
+        "significance": "Tested on 8 validation samples."
+      },
+      {
+        "id": "E5",
+        "name": "Latency & Speedup",
+        "subject": "Sequential vs Parallel",
+        "metric": "p50 Latency / Speedup",
+        "value": "16.12 ms (3.89x)",
+        "n": 25,
+        "n_eff": 5,
+        "disclaimer": "illustrative only, under-powered",
+        "significance": "Tested across 5 prompts (25 requests) on 4 detectors."
+      },
+      {
+        "id": "E6",
+        "name": "Sandbox Attack Success Rate",
+        "subject": "12 CPS Operational Scenarios",
+        "metric": "ASR (Guard OFF -> ON)",
+        "value": "85.7% -> 0.0%",
+        "n": 7,
+        "n_eff": 7,
+        "disclaimer": "illustrative only, under-powered",
+        "significance": "Tested across 7 synthetic episodes."
+      },
+      {
+        "id": "E7",
+        "name": "Disagreement Analysis",
+        "subject": "Ensemble Disagreements",
+        "metric": "Split Frequency",
+        "value": "50.0%",
+        "n": 8,
+        "n_eff": 8,
+        "disclaimer": "illustrative only, under-powered",
+        "significance": "Tested on 8 test samples (4/8 split)."
+      }
+    ]
+  },
+  "table_8_2": {
+    "table": "8.2",
+    "title": "Comparative Ablation Benchmark Table (Held-Out Test Split)",
+    "rows": [
+      {
+        "arm_id": "ARM_A",
+        "arm_name": "Arm A (Real Ensemble Only)",
+        "n_attacks": 90,
+        "n_eff_attacks": 11.0,
+        "rho_attacks": 0.3236,
+        "deff_attacks": 8.19,
+        "n_benign": 64,
+        "n_eff_benign": 64.0,
+        "rho_benign": 0.0,
+        "deff_benign": 1.0,
+        "n_total": 154,
+        "n_eff_total": 13.3,
+        "metrics": {
+          "asr": {
+            "reported": 0.8222,
+            "computed": 0.8222,
+            "ci_95_1000": [
+              0.5876,
+              0.9596
+            ],
+            "n": 90,
+            "n_eff": 11.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "recall": {
+            "reported": 0.1778,
+            "computed": 0.1778,
+            "ci_95_1000": [
+              0.0404,
+              0.4124
+            ],
+            "n": 90,
+            "n_eff": 11.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "false_block_rate": {
+            "reported": 0.0,
+            "computed": 0.0,
+            "ci_95_1000": [
+              0.0,
+              0.0
+            ],
+            "n": 64,
+            "n_eff": 64.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "utility": {
+            "reported": 1.0,
+            "computed": 1.0,
+            "ci_95_1000": [
+              1.0,
+              1.0
+            ],
+            "n": 64,
+            "n_eff": 64.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "challenge_effectiveness": {
+            "reported": 0.0,
+            "computed": 0.0,
+            "ci_95": [
+              0.0,
+              0.08
+            ],
+            "n": 0,
+            "n_eff": 0.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "latency_p50_p95_ms": [
+            2333.91,
+            2352.62
+          ],
+          "extra_calls_per_100": 0.0
+        },
+        "disclaimer": "illustrative only, under-powered"
+      },
+      {
+        "arm_id": "ARM_B",
+        "arm_name": "Arm B (Real Ensemble + Discrepancy Fusion)",
+        "n_attacks": 90,
+        "n_eff_attacks": 27.8,
+        "rho_attacks": 0.1007,
+        "deff_attacks": 3.238,
+        "n_benign": 64,
+        "n_eff_benign": 64.0,
+        "rho_benign": 0.0,
+        "deff_benign": 1.0,
+        "n_total": 154,
+        "n_eff_total": 80.4,
+        "metrics": {
+          "asr": {
+            "reported": 0.2444,
+            "computed": 0.2444,
+            "ci_95_1000": [
+              0.0928,
+              0.3778
+            ],
+            "n": 90,
+            "n_eff": 27.8,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "recall": {
+            "reported": 0.7556,
+            "computed": 0.7556,
+            "ci_95_1000": [
+              0.6222,
+              0.9072
+            ],
+            "n": 90,
+            "n_eff": 27.8,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "false_block_rate": {
+            "reported": 0.0625,
+            "computed": 0.0625,
+            "ci_95_1000": [
+              0.0156,
+              0.125
+            ],
+            "n": 64,
+            "n_eff": 64.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "utility": {
+            "reported": 0.9375,
+            "computed": 0.9375,
+            "ci_95_1000": [
+              0.875,
+              0.9844
+            ],
+            "n": 64,
+            "n_eff": 64.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "challenge_effectiveness": {
+            "reported": 0.0,
+            "computed": 0.0,
+            "ci_95": [
+              0.0,
+              0.08
+            ],
+            "n": 90,
+            "n_eff": 27.8,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "latency_p50_p95_ms": [
+            2333.92,
+            2352.62
+          ],
+          "extra_calls_per_100": 0.0
+        },
+        "disclaimer": "illustrative only, under-powered"
+      },
+      {
+        "arm_id": "ARM_C",
+        "arm_name": "Arm C (Real Ensemble + Challenger qwen3:8b)",
+        "n_attacks": 90,
+        "n_eff_attacks": 75.7,
+        "rho_attacks": 0.0085,
+        "deff_attacks": 1.189,
+        "n_benign": 64,
+        "n_eff_benign": 64.0,
+        "rho_benign": 0.0,
+        "deff_benign": 1.0,
+        "n_total": 154,
+        "n_eff_total": 108.4,
+        "metrics": {
+          "asr": {
+            "reported": 0.2333,
+            "computed": 0.2333,
+            "ci_95_1000": [
+              0.1556,
+              0.3111
+            ],
+            "n": 90,
+            "n_eff": 75.7,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "recall": {
+            "reported": 0.7667,
+            "computed": 0.7667,
+            "ci_95_1000": [
+              0.6889,
+              0.8444
+            ],
+            "n": 90,
+            "n_eff": 75.7,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "false_block_rate": {
+            "reported": 0.0,
+            "computed": 0.0,
+            "ci_95_1000": [
+              0.0,
+              0.0
+            ],
+            "n": 64,
+            "n_eff": 64.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "utility": {
+            "reported": 1.0,
+            "computed": 1.0,
+            "ci_95_1000": [
+              1.0,
+              1.0
+            ],
+            "n": 64,
+            "n_eff": 64.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "challenge_effectiveness": {
+            "reported": 0.8548,
+            "computed": 0.8548,
+            "ci_95": [
+              0.7748,
+              0.9348
+            ],
+            "n": 90,
+            "n_eff": 75.7,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "latency_p50_p95_ms": [
+            2344.14,
+            2380.31
+          ],
+          "extra_calls_per_100": 40.3
+        },
+        "disclaimer": "illustrative only, under-powered"
+      },
+      {
+        "arm_id": "ARM_C2",
+        "arm_name": "Arm C2 (Real Ensemble + Challenger gemma3:4b)",
+        "n_attacks": 90,
+        "n_eff_attacks": 63.1,
+        "rho_attacks": 0.0192,
+        "deff_attacks": 1.427,
+        "n_benign": 64,
+        "n_eff_benign": 64.0,
+        "rho_benign": 0.0,
+        "deff_benign": 1.0,
+        "n_total": 154,
+        "n_eff_total": 63.3,
+        "metrics": {
+          "asr": {
+            "reported": 0.3222,
+            "computed": 0.3222,
+            "ci_95_1000": [
+              0.2222,
+              0.4222
+            ],
+            "n": 90,
+            "n_eff": 63.1,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "recall": {
+            "reported": 0.6778,
+            "computed": 0.6778,
+            "ci_95_1000": [
+              0.5778,
+              0.7778
+            ],
+            "n": 90,
+            "n_eff": 63.1,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "false_block_rate": {
+            "reported": 0.0,
+            "computed": 0.0,
+            "ci_95_1000": [
+              0.0,
+              0.0
+            ],
+            "n": 64,
+            "n_eff": 64.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "utility": {
+            "reported": 1.0,
+            "computed": 1.0,
+            "ci_95_1000": [
+              1.0,
+              1.0
+            ],
+            "n": 64,
+            "n_eff": 64.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "challenge_effectiveness": {
+            "reported": 0.7258,
+            "computed": 0.7258,
+            "ci_95": [
+              0.6458,
+              0.8058
+            ],
+            "n": 90,
+            "n_eff": 63.1,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "latency_p50_p95_ms": [
+            2343.09,
+            2380.46
+          ],
+          "extra_calls_per_100": 40.3
+        },
+        "disclaimer": "illustrative only, under-powered"
+      },
+      {
+        "arm_id": "ARM_UPPER_BOUND",
+        "arm_name": "Arm Upper-Bound (Challenger-ON-all)",
+        "n_attacks": 90,
+        "n_eff_attacks": 35.4,
+        "rho_attacks": 0.0694,
+        "deff_attacks": 2.541,
+        "n_benign": 64,
+        "n_eff_benign": 64.0,
+        "rho_benign": 0.0,
+        "deff_benign": 1.0,
+        "n_total": 154,
+        "n_eff_total": 154.0,
+        "metrics": {
+          "asr": {
+            "reported": 0.0333,
+            "computed": 0.0333,
+            "ci_95_1000": [
+              0.0,
+              0.0928
+            ],
+            "n": 90,
+            "n_eff": 35.4,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "recall": {
+            "reported": 0.9667,
+            "computed": 0.9667,
+            "ci_95_1000": [
+              0.9072,
+              1.0
+            ],
+            "n": 90,
+            "n_eff": 35.4,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "false_block_rate": {
+            "reported": 0.0,
+            "computed": 0.0,
+            "ci_95_1000": [
+              0.0,
+              0.0
+            ],
+            "n": 64,
+            "n_eff": 64.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "utility": {
+            "reported": 1.0,
+            "computed": 1.0,
+            "ci_95_1000": [
+              1.0,
+              1.0
+            ],
+            "n": 64,
+            "n_eff": 64.0,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "challenge_effectiveness": {
+            "reported": 0.461,
+            "computed": 0.461,
+            "ci_95": [
+              0.381,
+              0.541
+            ],
+            "n": 90,
+            "n_eff": 35.4,
+            "disclaimer": "illustrative only, under-powered"
+          },
+          "latency_p50_p95_ms": [
+            2374.84,
+            2393.35
+          ],
+          "extra_calls_per_100": 100.0
+        },
+        "disclaimer": "illustrative only, under-powered"
+      }
+    ]
+  },
+  "table_8_3": {
+    "table": "8.3",
+    "title": "Per-Technique Recall & ASR Breakdown (Held-Out Test Split)",
+    "rows": [
+      {
+        "technique": "direct_instruction",
+        "n": 3,
+        "n_eff": 3,
+        "arm_a_recall": 0.0,
+        "arm_a_asr": 1.0,
+        "arm_c_recall": 1.0,
+        "arm_c_asr": 0.0,
+        "improvement": 1.0,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=3 < 30 (minimum threshold for reliable non-parametric bootstrap)"
+      },
+      {
+        "technique": "encoding_base64",
+        "n": 4,
+        "n_eff": 4,
+        "arm_a_recall": 0.75,
+        "arm_a_asr": 0.25,
+        "arm_c_recall": 0.75,
+        "arm_c_asr": 0.25,
+        "improvement": 0.0,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=4 < 30 (minimum threshold for reliable non-parametric bootstrap)"
+      },
+      {
+        "technique": "encoding_homoglyph",
+        "n": 8,
+        "n_eff": 8,
+        "arm_a_recall": 0.125,
+        "arm_a_asr": 0.875,
+        "arm_c_recall": 1.0,
+        "arm_c_asr": 0.0,
+        "improvement": 0.875,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=8 < 30 (minimum threshold for reliable non-parametric bootstrap)"
+      },
+      {
+        "technique": "encoding_leetspeak",
+        "n": 6,
+        "n_eff": 6,
+        "arm_a_recall": 0.5,
+        "arm_a_asr": 0.5,
+        "arm_c_recall": 0.6667,
+        "arm_c_asr": 0.3333,
+        "improvement": 0.1667,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=6 < 30 (minimum threshold for reliable non-parametric bootstrap)"
+      },
+      {
+        "technique": "encoding_rot13",
+        "n": 8,
+        "n_eff": 8,
+        "arm_a_recall": 0.75,
+        "arm_a_asr": 0.25,
+        "arm_c_recall": 0.75,
+        "arm_c_asr": 0.25,
+        "improvement": 0.0,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=8 < 30 (minimum threshold for reliable non-parametric bootstrap)"
+      },
+      {
+        "technique": "indirect_injection",
+        "n": 18,
+        "n_eff": 18,
+        "arm_a_recall": 0.0556,
+        "arm_a_asr": 0.9444,
+        "arm_c_recall": 0.6667,
+        "arm_c_asr": 0.3333,
+        "improvement": 0.6111,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=18 < 30 (minimum threshold for reliable non-parametric bootstrap)"
+      },
+      {
+        "technique": "multiturn_crescendo",
+        "n": 7,
+        "n_eff": 7,
+        "arm_a_recall": 0.0,
+        "arm_a_asr": 1.0,
+        "arm_c_recall": 0.8571,
+        "arm_c_asr": 0.1429,
+        "improvement": 0.8571,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=7 < 30 (minimum threshold for reliable non-parametric bootstrap)"
+      },
+      {
+        "technique": "privilege_escalation",
+        "n": 12,
+        "n_eff": 12,
+        "arm_a_recall": 0.0833,
+        "arm_a_asr": 0.9167,
+        "arm_c_recall": 1.0,
+        "arm_c_asr": 0.0,
+        "improvement": 0.9167,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=12 < 30 (minimum threshold for reliable non-parametric bootstrap)"
+      },
+      {
+        "technique": "roleplay_dan",
+        "n": 12,
+        "n_eff": 12,
+        "arm_a_recall": 0.0833,
+        "arm_a_asr": 0.9167,
+        "arm_c_recall": 0.9167,
+        "arm_c_asr": 0.0833,
+        "improvement": 0.8334,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=12 < 30 (minimum threshold for reliable non-parametric bootstrap)"
+      },
+      {
+        "technique": "tool_abuse",
+        "n": 12,
+        "n_eff": 12,
+        "arm_a_recall": 0.0,
+        "arm_a_asr": 1.0,
+        "arm_c_recall": 0.3333,
+        "arm_c_asr": 0.6667,
+        "improvement": 0.3333,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=12 < 30 (minimum threshold for reliable non-parametric bootstrap)"
+      }
+    ]
+  },
+  "table_9_2": {
+    "table": "9.2",
+    "title": "Real Baseline Benchmarks (Held-Out Test Split)",
+    "rows": [
+      {
+        "system": "PromptForest 1.0.0 (Stock Degraded Mode)",
+        "status": "evaluated",
+        "n_attacks": 90,
+        "n_eff_attacks": 90.0,
+        "n_benign": 80,
+        "n_eff_benign": 80.0,
+        "recall": 0.0,
+        "recall_ci_95_1000": [
+          0.0,
+          0.0
+        ],
+        "recall_wilson_ci_95": [
+          0.0,
+          0.0409
+        ],
+        "asr": 1.0,
+        "asr_ci_95_1000": [
+          1.0,
+          1.0
+        ],
+        "fpr": 0.0,
+        "fpr_ci_95_1000": [
+          0.0,
+          0.0
+        ],
+        "fpr_wilson_ci_95": [
+          0.0,
+          0.0458
+        ],
+        "warm_latency_ms": 12.0,
+        "disclaimer": "illustrative only, under-powered"
+      },
+      {
+        "system": "PromptForest 1.0.0 (Two-Detector PARALLAX Mode)",
+        "status": "evaluated",
+        "n_attacks": 90,
+        "n_eff_attacks": 13.7,
+        "n_benign": 80,
+        "n_eff_benign": 80.0,
+        "recall": 0.4556,
+        "recall_ci_95_1000": [
+          0.2195,
+          0.6531
+        ],
+        "recall_wilson_ci_95": [
+          0.3566,
+          0.5582
+        ],
+        "asr": 0.5444,
+        "asr_ci_95_1000": [
+          0.3469,
+          0.7805
+        ],
+        "fpr": 0.0,
+        "fpr_ci_95_1000": [
+          0.0,
+          0.0
+        ],
+        "fpr_wilson_ci_95": [
+          0.0,
+          0.0458
+        ],
+        "warm_latency_ms": 10.5,
+        "disclaimer": "illustrative only, under-powered"
+      },
+      {
+        "system": "Vijil v5 Substituted (vijil/prompt-injection-v5-20260827)",
+        "status": "unavailable_gated",
+        "n": 0,
+        "n_eff": 0.0,
+        "recall": null,
+        "recall_ci_95": null,
+        "asr": null,
+        "asr_ci_95": null,
+        "fpr": null,
+        "latency_ms": null,
+        "disclaimer": "N/A (model unavailable/gated)"
+      },
+      {
+        "system": "Prompt Guard 2 Alone (meta-llama/Llama-Prompt-Guard-2-86M)",
+        "status": "evaluated",
+        "n_attacks": 90,
+        "n_eff_attacks": 15.9,
+        "n_benign": 80,
+        "n_eff_benign": 80.0,
+        "recall": 0.4667,
+        "recall_ci_95_1000": [
+          0.2439,
+          0.6531
+        ],
+        "recall_wilson_ci_95": [
+          0.3671,
+          0.569
+        ],
+        "asr": 0.5333,
+        "asr_ci_95_1000": [
+          0.3469,
+          0.7561
+        ],
+        "fpr": 0.0,
+        "fpr_ci_95_1000": [
+          0.0,
+          0.0
+        ],
+        "fpr_wilson_ci_95": [
+          0.0,
+          0.0458
+        ],
+        "warm_latency_ms": 10.5,
+        "disclaimer": "illustrative only, under-powered"
+      },
+      {
+        "system": "LlamaFirewall 1.0.3 PromptGuardScanner",
+        "status": "evaluated",
+        "n_attacks": 90,
+        "n_eff_attacks": 15.9,
+        "n_benign": 80,
+        "n_eff_benign": 80.0,
+        "recall": 0.4667,
+        "recall_ci_95_1000": [
+          0.2439,
+          0.6531
+        ],
+        "recall_wilson_ci_95": [
+          0.3671,
+          0.569
+        ],
+        "asr": 0.5333,
+        "asr_ci_95_1000": [
+          0.3469,
+          0.7561
+        ],
+        "fpr": 0.0,
+        "fpr_ci_95_1000": [
+          0.0,
+          0.0
+        ],
+        "fpr_wilson_ci_95": [
+          0.0,
+          0.0458
+        ],
+        "warm_latency_ms": 10.5,
+        "disclaimer": "illustrative only, under-powered"
+      }
+    ]
+  },
+  "table_9_3": {
+    "table": "9.3",
+    "title": "Review Router Benchmark & Cost Curves",
+    "rows": [
+      {
+        "policy": "arm_a_alone",
+        "recall": 0.9111,
+        "recall_ci_95": [
+          0.7419,
+          1.0
+        ],
+        "recall_wilson_ci_95": [
+          0.8343,
+          0.9543
+        ],
+        "recall_n": 90,
+        "recall_n_eff": 11.8,
+        "recall_disclaimer": "illustrative only, under-powered",
+        "precision": 0.8913,
+        "precision_n": 93,
+        "precision_disclaimer": "illustrative only, under-powered",
+        "f1": 0.8962,
+        "f1_ci_95": [
+          0.6397,
+          0.9644
+        ],
+        "f1_n": 146,
+        "f1_n_eff": 62.2,
+        "f1_disclaimer": "statistically powered (n >= 100)",
+        "fpr": 0.1964,
+        "fpr_ci_95": [
+          0.1296,
+          0.2593
+        ],
+        "fpr_wilson_ci_95": [
+          0.1134,
+          0.3184
+        ],
+        "fpr_n": 56,
+        "fpr_n_eff": 56.0,
+        "fpr_disclaimer": "illustrative only, under-powered",
+        "extra_calls_per_100": 0.0,
+        "extra_calls_n": 146
+      },
+      {
+        "policy": "rule_trigger",
+        "recall": 0.9111,
+        "recall_ci_95": [
+          0.7419,
+          1.0
+        ],
+        "recall_wilson_ci_95": [
+          0.8343,
+          0.9543
+        ],
+        "recall_n": 90,
+        "recall_n_eff": 11.8,
+        "recall_disclaimer": "illustrative only, under-powered",
+        "precision": 0.8654,
+        "precision_n": 96,
+        "precision_disclaimer": "illustrative only, under-powered",
+        "f1": 0.8817,
+        "f1_ci_95": [
+          0.6038,
+          0.9582
+        ],
+        "f1_n": 146,
+        "f1_n_eff": 38.6,
+        "f1_disclaimer": "statistically powered (n >= 100)",
+        "fpr": 0.25,
+        "fpr_ci_95": [
+          0.1481,
+          0.3571
+        ],
+        "fpr_wilson_ci_95": [
+          0.1552,
+          0.3769
+        ],
+        "fpr_n": 56,
+        "fpr_n_eff": 56.0,
+        "fpr_disclaimer": "illustrative only, under-powered",
+        "extra_calls_per_100": 71.23,
+        "extra_calls_n": 146
+      },
+      {
+        "policy": "learned_router_arm_r",
+        "recall": 0.9111,
+        "recall_ci_95": [
+          0.7419,
+          1.0
+        ],
+        "recall_wilson_ci_95": [
+          0.8343,
+          0.9543
+        ],
+        "recall_n": 90,
+        "recall_n_eff": 11.8,
+        "recall_disclaimer": "illustrative only, under-powered",
+        "precision": 0.8646,
+        "precision_n": 96,
+        "precision_disclaimer": "illustrative only, under-powered",
+        "f1": 0.8817,
+        "f1_ci_95": [
+          0.6038,
+          0.9582
+        ],
+        "f1_n": 146,
+        "f1_n_eff": 38.6,
+        "f1_disclaimer": "statistically powered (n >= 100)",
+        "fpr": 0.25,
+        "fpr_ci_95": [
+          0.1481,
+          0.3571
+        ],
+        "fpr_wilson_ci_95": [
+          0.1552,
+          0.3769
+        ],
+        "fpr_n": 56,
+        "fpr_n_eff": 56.0,
+        "fpr_disclaimer": "illustrative only, under-powered",
+        "extra_calls_per_100": 33.56,
+        "extra_calls_n": 146
+      },
+      {
+        "policy": "challenger_on_all_arm_u",
+        "recall": 1.0,
+        "recall_ci_95": [
+          1.0,
+          1.0
+        ],
+        "recall_wilson_ci_95": [
+          0.9591,
+          1.0
+        ],
+        "recall_n": 90,
+        "recall_n_eff": 90.0,
+        "recall_disclaimer": "illustrative only, under-powered",
+        "precision": 0.6164,
+        "precision_n": 146,
+        "precision_disclaimer": "illustrative only, under-powered",
+        "f1": 0.7627,
+        "f1_ci_95": [
+          0.3888,
+          0.9017
+        ],
+        "f1_n": 146,
+        "f1_n_eff": 9.3,
+        "f1_disclaimer": "statistically powered (n >= 100)",
+        "fpr": 1.0,
+        "fpr_ci_95": [
+          1.0,
+          1.0
+        ],
+        "fpr_wilson_ci_95": [
+          0.9358,
+          1.0
+        ],
+        "fpr_n": 56,
+        "fpr_n_eff": 56.0,
+        "fpr_disclaimer": "illustrative only, under-powered",
+        "extra_calls_per_100": 100.0,
+        "extra_calls_n": 146
+      }
+    ]
+  },
+  "table_9_4": {
+    "table": "9.4",
+    "title": "Challenger V2: Evidence Grounding & Authority Policy Ablation",
+    "rows": [
+      {
+        "metric": "Attack Recall",
+        "n": 20,
+        "n_eff": 20,
+        "policy_a": 1.0,
+        "policy_b": 1.0,
+        "delta": 0.0,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=20 < 30"
+      },
+      {
+        "metric": "False-Block Rate (FBR)",
+        "n": 20,
+        "n_eff": 20,
+        "policy_a": 0.45,
+        "policy_b": 0.5,
+        "delta": 0.05,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=20 < 30"
+      },
+      {
+        "metric": "False Positive Rate (FPR)",
+        "n": 20,
+        "n_eff": 20,
+        "policy_a": 0.45,
+        "policy_b": 0.5,
+        "delta": 0.05,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=20 < 30"
+      },
+      {
+        "metric": "Extra Calls / 100 Reqs",
+        "n": 40,
+        "n_eff": 40,
+        "policy_a": 277.5,
+        "policy_b": 277.5,
+        "delta": 0.0,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": true,
+        "ci_reason": "n=40 >= 30, but < 100"
+      }
+    ]
+  },
+  "table_9_5": {
+    "table": "9.5",
+    "title": "Adaptive Attacker Benchmark (PyRIT vs PARALLAX Defense Tiers)",
+    "rows": [
+      {
+        "tier": "guard_off",
+        "n": 5,
+        "n_eff": 5,
+        "b1": 1.0,
+        "b5": 1.0,
+        "b10": 1.0,
+        "b20": 1.0,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=5 < 30 (very small sample size)"
+      },
+      {
+        "tier": "guard_on",
+        "n": 5,
+        "n_eff": 5,
+        "b1": 0.0,
+        "b5": 0.0,
+        "b10": 0.0,
+        "b20": 0.0,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=5 < 30 (very small sample size)"
+      },
+      {
+        "tier": "guard_challenger",
+        "n": 5,
+        "n_eff": 5,
+        "b1": 0.0,
+        "b5": 0.0,
+        "b10": 0.0,
+        "b20": 0.0,
+        "disclaimer": "illustrative only, under-powered",
+        "ci_computable": false,
+        "ci_reason": "n=5 < 30 (very small sample size)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Judge Outcome Counts and Latency Distribution",
+  "split": "held_out_v4",
+  "n": 347,
+  "source_files": [
+    "results/final-v4/predictions.jsonl"
+  ],
+  "source_sha256": [
+    "74e0975eccda410597a865e3b0b5581e7732eca04406c4ca032cfccc29e1a444"
+  ],
+  "assertions": [
+    "Abstain count == 10",
+    "Abstain mean latency == 7794.3"
+  ]
+}
